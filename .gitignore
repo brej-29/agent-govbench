@@ -1,0 +1,16 @@
+.env
+terraform.tfvars
+*.tfstate*
+.terraform/
+.venv/
+__pycache__/
+*.pyc
+backend.conf
+exports/
+state.json
+local_traces/
+*.json.key
+infra/codelab/skaffold.yaml
+infra/codelab/cloudrun/*.yaml
+data/
+agent/local.env

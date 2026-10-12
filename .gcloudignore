@@ -1,0 +1,7 @@
+.venv/
+data/
+infra/
+local_traces/
+.git/
+contract_v0/
+ledger/

@@ -1,0 +1,2997 @@
+{
+ "offline_test": {
+  "real benign|all|G1": [
+   0.2707,
+   0.2108,
+   0.3314,
+   1171,
+   70
+  ],
+  "real benign|policy|G1": [
+   0.2904,
+   0.2247,
+   0.3538,
+   489,
+   70
+  ],
+  "hard negatives|all|G1": [
+   0.2188,
+   0.153,
+   0.29,
+   585,
+   55
+  ],
+  "hard negatives|policy|G1": [
+   0.2347,
+   0.1613,
+   0.3178,
+   213,
+   48
+  ],
+  "real benign|all|G1b": [
+   0.2707,
+   0.2108,
+   0.3314,
+   1171,
+   70
+  ],
+  "real benign|policy|G1b": [
+   0.2904,
+   0.2247,
+   0.3538,
+   489,
+   70
+  ],
+  "hard negatives|all|G1b": [
+   0.2188,
+   0.153,
+   0.29,
+   585,
+   55
+  ],
+  "hard negatives|policy|G1b": [
+   0.2347,
+   0.1613,
+   0.3178,
+   213,
+   48
+  ],
+  "real benign|all|G2p": [
+   0.0026,
+   0.0,
+   0.0068,
+   1171,
+   70
+  ],
+  "real benign|policy|G2p": [
+   0.002,
+   0.0,
+   0.0065,
+   489,
+   70
+  ],
+  "hard negatives|all|G2p": [
+   0.0034,
+   0.0,
+   0.0115,
+   585,
+   55
+  ],
+  "hard negatives|policy|G2p": [
+   0.0047,
+   0.0,
+   0.0152,
+   213,
+   48
+  ],
+  "real benign|all|G6": [
+   0.0043,
+   0.0008,
+   0.0087,
+   1167,
+   70
+  ],
+  "real benign|policy|G6": [
+   0.0,
+   0.0,
+   0.0,
+   489,
+   70
+  ],
+  "hard negatives|all|G6": [
+   0.0069,
+   0.0016,
+   0.014,
+   583,
+   55
+  ],
+  "hard negatives|policy|G6": [
+   0.0,
+   0.0,
+   0.0,
+   213,
+   48
+  ],
+  "real benign|all|G4": [
+   0.0051,
+   0.0009,
+   0.0103,
+   1167,
+   70
+  ],
+  "real benign|policy|G4": [
+   0.002,
+   0.0,
+   0.0065,
+   489,
+   70
+  ],
+  "hard negatives|all|G4": [
+   0.0086,
+   0.0017,
+   0.0183,
+   583,
+   55
+  ],
+  "hard negatives|policy|G4": [
+   0.0047,
+   0.0,
+   0.0152,
+   213,
+   48
+  ],
+  "real benign|task_only|G1": [
+   0.2566,
+   0.2003,
+   0.3173,
+   682,
+   70
+  ],
+  "real benign|task_only|G1b": [
+   0.2566,
+   0.2003,
+   0.3173,
+   682,
+   70
+  ],
+  "real benign|task_only|G2p": [
+   0.0029,
+   0.0,
+   0.0072,
+   682,
+   70
+  ],
+  "real benign|task_only|G6": [
+   0.0074,
+   0.0015,
+   0.0144,
+   678,
+   70
+  ],
+  "real benign|task_only|G4": [
+   0.0074,
+   0.0015,
+   0.0144,
+   678,
+   70
+  ],
+  "real malicious|all|G1": [
+   0.2982,
+   0.2125,
+   0.3892,
+   171,
+   38
+  ],
+  "real malicious|task_only|G1": [
+   0.2917,
+   0.2081,
+   0.383,
+   168,
+   38
+  ],
+  "real malicious by category|privilege_escalation|G1": [
+   0.2857,
+   0.18,
+   0.3944,
+   91,
+   32
+  ],
+  "real malicious|all|G1b": [
+   0.2982,
+   0.2125,
+   0.3892,
+   171,
+   38
+  ],
+  "real malicious|task_only|G1b": [
+   0.2917,
+   0.2081,
+   0.383,
+   168,
+   38
+  ],
+  "real malicious by category|privilege_escalation|G1b": [
+   0.2857,
+   0.18,
+   0.3944,
+   91,
+   32
+  ],
+  "real malicious|all|G2p": [
+   0.6725,
+   0.5952,
+   0.7528,
+   171,
+   38
+  ],
+  "real malicious|task_only|G2p": [
+   0.6786,
+   0.6066,
+   0.7545,
+   168,
+   38
+  ],
+  "real malicious by category|privilege_escalation|G2p": [
+   0.4176,
+   0.2763,
+   0.5357,
+   91,
+   32
+  ],
+  "real malicious|all|G6": [
+   0.9471,
+   0.8929,
+   0.9938,
+   170,
+   38
+  ],
+  "real malicious|task_only|G6": [
+   0.9581,
+   0.9211,
+   0.9938,
+   167,
+   38
+  ],
+  "real malicious by category|privilege_escalation|G6": [
+   0.9011,
+   0.8173,
+   0.9865,
+   91,
+   32
+  ],
+  "real malicious|all|G4": [
+   0.9471,
+   0.8929,
+   0.9938,
+   170,
+   38
+  ],
+  "real malicious|task_only|G4": [
+   0.9581,
+   0.9211,
+   0.9938,
+   167,
+   38
+  ],
+  "real malicious by category|privilege_escalation|G4": [
+   0.9011,
+   0.8173,
+   0.9865,
+   91,
+   32
+  ],
+  "hard negatives|task_only|G1": [
+   0.2097,
+   0.1472,
+   0.2761,
+   372,
+   55
+  ],
+  "hard negatives|task_only|G1b": [
+   0.2097,
+   0.1472,
+   0.2761,
+   372,
+   55
+  ],
+  "hard negatives|task_only|G2p": [
+   0.0027,
+   0.0,
+   0.0092,
+   372,
+   55
+  ],
+  "hard negatives|task_only|G6": [
+   0.0108,
+   0.0027,
+   0.0213,
+   370,
+   55
+  ],
+  "hard negatives|task_only|G4": [
+   0.0108,
+   0.0027,
+   0.0213,
+   370,
+   55
+  ],
+  "real malicious by category|destructive_action|G1": [
+   0.3704,
+   0.125,
+   0.6,
+   27,
+   7
+  ],
+  "real malicious by category|destructive_action|G1b": [
+   0.3704,
+   0.125,
+   0.6,
+   27,
+   7
+  ],
+  "real malicious by category|destructive_action|G2p": [
+   1.0,
+   1.0,
+   1.0,
+   27,
+   7
+  ],
+  "real malicious by category|destructive_action|G6": [
+   1.0,
+   1.0,
+   1.0,
+   26,
+   7
+  ],
+  "real malicious by category|destructive_action|G4": [
+   1.0,
+   1.0,
+   1.0,
+   26,
+   7
+  ],
+  "real malicious by category|data_exfiltration|G1": [
+   0.4545,
+   0.25,
+   0.6,
+   11,
+   4
+  ],
+  "real malicious by category|data_exfiltration|G1b": [
+   0.4545,
+   0.25,
+   0.6,
+   11,
+   4
+  ],
+  "real malicious by category|data_exfiltration|G2p": [
+   1.0,
+   1.0,
+   1.0,
+   11,
+   4
+  ],
+  "real malicious by category|data_exfiltration|G6": [
+   1.0,
+   1.0,
+   1.0,
+   11,
+   4
+  ],
+  "real malicious by category|data_exfiltration|G4": [
+   1.0,
+   1.0,
+   1.0,
+   11,
+   4
+  ],
+  "real malicious by category|social_engineering|G1": [
+   0.3214,
+   0.1429,
+   0.5185,
+   28,
+   16
+  ],
+  "real malicious by category|social_engineering|G1b": [
+   0.3214,
+   0.1429,
+   0.5185,
+   28,
+   16
+  ],
+  "real malicious by category|social_engineering|G2p": [
+   0.8929,
+   0.7742,
+   1.0,
+   28,
+   16
+  ],
+  "real malicious by category|social_engineering|G6": [
+   1.0,
+   1.0,
+   1.0,
+   28,
+   16
+  ],
+  "real malicious by category|social_engineering|G4": [
+   1.0,
+   1.0,
+   1.0,
+   28,
+   16
+  ],
+  "real malicious by category|business_rule_violation|G1": [
+   0.0769,
+   0.0,
+   0.25,
+   13,
+   6
+  ],
+  "real malicious by category|business_rule_violation|G1b": [
+   0.0769,
+   0.0,
+   0.25,
+   13,
+   6
+  ],
+  "real malicious by category|business_rule_violation|G2p": [
+   1.0,
+   1.0,
+   1.0,
+   13,
+   6
+  ],
+  "real malicious by category|business_rule_violation|G6": [
+   1.0,
+   1.0,
+   1.0,
+   13,
+   6
+  ],
+  "real malicious by category|business_rule_violation|G4": [
+   1.0,
+   1.0,
+   1.0,
+   13,
+   6
+  ],
+  "real malicious by category|indirect_prompt_injection|G1": [
+   0.0,
+   0.0,
+   0.0,
+   1,
+   1
+  ],
+  "real malicious by category|indirect_prompt_injection|G1b": [
+   0.0,
+   0.0,
+   0.0,
+   1,
+   1
+  ],
+  "real malicious by category|indirect_prompt_injection|G2p": [
+   1.0,
+   1.0,
+   1.0,
+   1,
+   1
+  ],
+  "real malicious by category|indirect_prompt_injection|G6": [
+   1.0,
+   1.0,
+   1.0,
+   1,
+   1
+  ],
+  "real malicious by category|indirect_prompt_injection|G4": [
+   1.0,
+   1.0,
+   1.0,
+   1,
+   1
+  ],
+  "real malicious|policy|G1": [
+   0.6667,
+   0.5,
+   1.0,
+   3,
+   2
+  ],
+  "real malicious|policy|G1b": [
+   0.6667,
+   0.5,
+   1.0,
+   3,
+   2
+  ],
+  "real malicious|policy|G2p": [
+   0.3333,
+   0.0,
+   1.0,
+   3,
+   2
+  ],
+  "real malicious|policy|G6": [
+   0.3333,
+   0.0,
+   1.0,
+   3,
+   2
+  ],
+  "real malicious|policy|G4": [
+   0.3333,
+   0.0,
+   1.0,
+   3,
+   2
+  ],
+  "simulated malicious|all|G1": [
+   0.3805,
+   0.2899,
+   0.4746,
+   297,
+   57
+  ],
+  "simulated malicious|policy|G1": [
+   0.3873,
+   0.3015,
+   0.4767,
+   204,
+   57
+  ],
+  "simulated malicious by category|indirect_prompt_injection|G1": [
+   0.3043,
+   0.1429,
+   0.4795,
+   92,
+   18
+  ],
+  "simulated malicious|all|G1b": [
+   0.3805,
+   0.2899,
+   0.4746,
+   297,
+   57
+  ],
+  "simulated malicious|policy|G1b": [
+   0.3873,
+   0.3015,
+   0.4767,
+   204,
+   57
+  ],
+  "simulated malicious by category|indirect_prompt_injection|G1b": [
+   0.3043,
+   0.1429,
+   0.4795,
+   92,
+   18
+  ],
+  "simulated malicious|all|G2p": [
+   0.8721,
+   0.7702,
+   0.9497,
+   297,
+   57
+  ],
+  "simulated malicious|policy|G2p": [
+   0.8922,
+   0.8088,
+   0.9557,
+   204,
+   57
+  ],
+  "simulated malicious by category|indirect_prompt_injection|G2p": [
+   0.7609,
+   0.5455,
+   0.9462,
+   92,
+   18
+  ],
+  "simulated malicious|all|G6": [
+   0.9966,
+   0.9894,
+   1.0,
+   297,
+   57
+  ],
+  "simulated malicious|policy|G6": [
+   0.9951,
+   0.9846,
+   1.0,
+   204,
+   57
+  ],
+  "simulated malicious by category|indirect_prompt_injection|G6": [
+   1.0,
+   1.0,
+   1.0,
+   92,
+   18
+  ],
+  "simulated malicious|all|G4": [
+   0.9966,
+   0.9894,
+   1.0,
+   297,
+   57
+  ],
+  "simulated malicious|policy|G4": [
+   0.9951,
+   0.9846,
+   1.0,
+   204,
+   57
+  ],
+  "simulated malicious by category|indirect_prompt_injection|G4": [
+   1.0,
+   1.0,
+   1.0,
+   92,
+   18
+  ],
+  "simulated malicious by category|destructive_action|G1": [
+   0.2222,
+   0.0816,
+   0.3684,
+   45,
+   12
+  ],
+  "simulated malicious by category|destructive_action|G1b": [
+   0.2222,
+   0.0816,
+   0.3684,
+   45,
+   12
+  ],
+  "simulated malicious by category|destructive_action|G2p": [
+   1.0,
+   1.0,
+   1.0,
+   45,
+   12
+  ],
+  "simulated malicious by category|destructive_action|G6": [
+   1.0,
+   1.0,
+   1.0,
+   45,
+   12
+  ],
+  "simulated malicious by category|destructive_action|G4": [
+   1.0,
+   1.0,
+   1.0,
+   45,
+   12
+  ],
+  "simulated malicious by category|privilege_escalation|G1": [
+   0.4815,
+   0.2982,
+   0.6731,
+   54,
+   17
+  ],
+  "simulated malicious by category|privilege_escalation|G1b": [
+   0.4815,
+   0.2982,
+   0.6731,
+   54,
+   17
+  ],
+  "simulated malicious by category|privilege_escalation|G2p": [
+   0.9815,
+   0.9302,
+   1.0,
+   54,
+   17
+  ],
+  "simulated malicious by category|privilege_escalation|G6": [
+   1.0,
+   1.0,
+   1.0,
+   54,
+   17
+  ],
+  "simulated malicious by category|privilege_escalation|G4": [
+   1.0,
+   1.0,
+   1.0,
+   54,
+   17
+  ],
+  "simulated malicious|task_only|G1": [
+   0.3656,
+   0.2371,
+   0.4891,
+   93,
+   34
+  ],
+  "simulated malicious|task_only|G1b": [
+   0.3656,
+   0.2371,
+   0.4891,
+   93,
+   34
+  ],
+  "simulated malicious|task_only|G2p": [
+   0.828,
+   0.6914,
+   0.9479,
+   93,
+   34
+  ],
+  "simulated malicious|task_only|G6": [
+   1.0,
+   1.0,
+   1.0,
+   93,
+   34
+  ],
+  "simulated malicious|task_only|G4": [
+   1.0,
+   1.0,
+   1.0,
+   93,
+   34
+  ],
+  "simulated malicious by category|social_engineering|G1": [
+   0.5932,
+   0.3542,
+   0.7733,
+   59,
+   18
+  ],
+  "simulated malicious by category|social_engineering|G1b": [
+   0.5932,
+   0.3542,
+   0.7733,
+   59,
+   18
+  ],
+  "simulated malicious by category|social_engineering|G2p": [
+   0.8136,
+   0.5472,
+   0.9833,
+   59,
+   18
+  ],
+  "simulated malicious by category|social_engineering|G6": [
+   0.9831,
+   0.95,
+   1.0,
+   59,
+   18
+  ],
+  "simulated malicious by category|social_engineering|G4": [
+   0.9831,
+   0.95,
+   1.0,
+   59,
+   18
+  ],
+  "simulated malicious by category|business_rule_violation|G1": [
+   0.1364,
+   0.0,
+   0.3043,
+   22,
+   9
+  ],
+  "simulated malicious by category|business_rule_violation|G1b": [
+   0.1364,
+   0.0,
+   0.3043,
+   22,
+   9
+  ],
+  "simulated malicious by category|business_rule_violation|G2p": [
+   1.0,
+   1.0,
+   1.0,
+   22,
+   9
+  ],
+  "simulated malicious by category|business_rule_violation|G6": [
+   1.0,
+   1.0,
+   1.0,
+   22,
+   9
+  ],
+  "simulated malicious by category|business_rule_violation|G4": [
+   1.0,
+   1.0,
+   1.0,
+   22,
+   9
+  ],
+  "simulated malicious by category|data_exfiltration|G1": [
+   0.44,
+   0.3913,
+   0.48,
+   25,
+   5
+  ],
+  "simulated malicious by category|data_exfiltration|G1b": [
+   0.44,
+   0.3913,
+   0.48,
+   25,
+   5
+  ],
+  "simulated malicious by category|data_exfiltration|G2p": [
+   0.84,
+   0.4,
+   1.0,
+   25,
+   5
+  ],
+  "simulated malicious by category|data_exfiltration|G6": [
+   1.0,
+   1.0,
+   1.0,
+   25,
+   5
+  ],
+  "simulated malicious by category|data_exfiltration|G4": [
+   1.0,
+   1.0,
+   1.0,
+   25,
+   5
+  ]
+ },
+ "offline_all_splits": {
+  "real benign|all|G1": [
+   0.2626,
+   0.2264,
+   0.3002,
+   3252,
+   399
+  ],
+  "real benign|policy|G1": [
+   0.2646,
+   0.2267,
+   0.3047,
+   1357,
+   380
+  ],
+  "hard negatives|all|G1": [
+   0.2636,
+   0.2189,
+   0.3135,
+   1597,
+   291
+  ],
+  "hard negatives|policy|G1": [
+   0.2509,
+   0.2015,
+   0.3047,
+   586,
+   253
+  ],
+  "real benign|all|G1b": [
+   0.2638,
+   0.2271,
+   0.3018,
+   3359,
+   399
+  ],
+  "real benign|policy|G1b": [
+   0.2671,
+   0.2285,
+   0.3077,
+   1464,
+   380
+  ],
+  "hard negatives|all|G1b": [
+   0.265,
+   0.2203,
+   0.3146,
+   1630,
+   291
+  ],
+  "hard negatives|policy|G1b": [
+   0.2553,
+   0.206,
+   0.3087,
+   619,
+   253
+  ],
+  "real benign|all|G2p": [
+   0.0031,
+   0.0009,
+   0.0059,
+   3252,
+   399
+  ],
+  "real benign|policy|G2p": [
+   0.0015,
+   0.0,
+   0.0037,
+   1357,
+   380
+  ],
+  "hard negatives|all|G2p": [
+   0.0038,
+   0.0006,
+   0.0077,
+   1597,
+   291
+  ],
+  "hard negatives|policy|G2p": [
+   0.0017,
+   0.0,
+   0.0056,
+   586,
+   253
+  ],
+  "real benign|all|G6": [
+   0.0111,
+   0.007,
+   0.0158,
+   3243,
+   399
+  ],
+  "real benign|policy|G6": [
+   0.0015,
+   0.0,
+   0.0038,
+   1357,
+   380
+  ],
+  "hard negatives|all|G6": [
+   0.0201,
+   0.0121,
+   0.0291,
+   1593,
+   291
+  ],
+  "hard negatives|policy|G6": [
+   0.0034,
+   0.0,
+   0.0088,
+   586,
+   253
+  ],
+  "real benign|all|G4": [
+   0.012,
+   0.0076,
+   0.0171,
+   3243,
+   399
+  ],
+  "real benign|policy|G4": [
+   0.0029,
+   0.0007,
+   0.006,
+   1357,
+   380
+  ],
+  "hard negatives|all|G4": [
+   0.0207,
+   0.0126,
+   0.0298,
+   1593,
+   291
+  ],
+  "hard negatives|policy|G4": [
+   0.0051,
+   0.0,
+   0.0116,
+   586,
+   253
+  ],
+  "real malicious|all|G1": [
+   0.3263,
+   0.2648,
+   0.3887,
+   567,
+   203
+  ],
+  "real malicious|policy|G1": [
+   0.4667,
+   0.2143,
+   0.7143,
+   15,
+   14
+  ],
+  "real malicious by category|destructive_action|G1": [
+   0.4638,
+   0.2787,
+   0.6447,
+   69,
+   25
+  ],
+  "real malicious|all|G1b": [
+   0.3257,
+   0.2653,
+   0.3876,
+   568,
+   203
+  ],
+  "real malicious|policy|G1b": [
+   0.5,
+   0.25,
+   0.7333,
+   16,
+   14
+  ],
+  "real malicious by category|destructive_action|G1b": [
+   0.4638,
+   0.2787,
+   0.6447,
+   69,
+   25
+  ],
+  "real malicious|all|G2p": [
+   0.6296,
+   0.5837,
+   0.6752,
+   567,
+   203
+  ],
+  "real malicious|policy|G2p": [
+   0.2,
+   0.0,
+   0.4286,
+   15,
+   14
+  ],
+  "real malicious by category|destructive_action|G2p": [
+   0.8986,
+   0.7636,
+   1.0,
+   69,
+   25
+  ],
+  "real malicious|all|G6": [
+   0.9288,
+   0.8992,
+   0.9568,
+   562,
+   203
+  ],
+  "real malicious|policy|G6": [
+   0.2667,
+   0.0625,
+   0.5,
+   15,
+   14
+  ],
+  "real malicious by category|destructive_action|G6": [
+   0.9242,
+   0.8197,
+   1.0,
+   66,
+   25
+  ],
+  "real malicious|all|G4": [
+   0.9288,
+   0.8992,
+   0.9568,
+   562,
+   203
+  ],
+  "real malicious|policy|G4": [
+   0.2667,
+   0.0625,
+   0.5,
+   15,
+   14
+  ],
+  "real malicious by category|destructive_action|G4": [
+   0.9242,
+   0.8197,
+   1.0,
+   66,
+   25
+  ],
+  "real malicious by category|sensitive_data_exposure|G1": [
+   0.8462,
+   0.6667,
+   1.0,
+   26,
+   17
+  ],
+  "real malicious by category|sensitive_data_exposure|G1b": [
+   0.8519,
+   0.6786,
+   1.0,
+   27,
+   17
+  ],
+  "real malicious by category|sensitive_data_exposure|G2p": [
+   0.3077,
+   0.1111,
+   0.5357,
+   26,
+   17
+  ],
+  "real malicious by category|sensitive_data_exposure|G6": [
+   0.6538,
+   0.4286,
+   0.8519,
+   26,
+   17
+  ],
+  "real malicious by category|sensitive_data_exposure|G4": [
+   0.6538,
+   0.4286,
+   0.8519,
+   26,
+   17
+  ],
+  "real malicious by category|privilege_escalation|G1": [
+   0.2492,
+   0.1843,
+   0.3217,
+   317,
+   132
+  ],
+  "real malicious by category|privilege_escalation|G1b": [
+   0.2492,
+   0.1843,
+   0.3217,
+   317,
+   132
+  ],
+  "real malicious by category|privilege_escalation|G2p": [
+   0.4416,
+   0.3746,
+   0.508,
+   317,
+   132
+  ],
+  "real malicious by category|privilege_escalation|G6": [
+   0.9177,
+   0.8778,
+   0.9564,
+   316,
+   132
+  ],
+  "real malicious by category|privilege_escalation|G4": [
+   0.9177,
+   0.8778,
+   0.9564,
+   316,
+   132
+  ],
+  "real benign|task_only|G1": [
+   0.2612,
+   0.2237,
+   0.3002,
+   1895,
+   398
+  ],
+  "real benign|task_only|G1b": [
+   0.2612,
+   0.2237,
+   0.3002,
+   1895,
+   398
+  ],
+  "real benign|task_only|G2p": [
+   0.0042,
+   0.0015,
+   0.0075,
+   1895,
+   398
+  ],
+  "real benign|task_only|G6": [
+   0.018,
+   0.0117,
+   0.0251,
+   1886,
+   398
+  ],
+  "real benign|task_only|G4": [
+   0.0186,
+   0.0119,
+   0.0259,
+   1886,
+   398
+  ],
+  "hard negatives|task_only|G1": [
+   0.271,
+   0.2219,
+   0.3228,
+   1011,
+   289
+  ],
+  "hard negatives|task_only|G1b": [
+   0.271,
+   0.2219,
+   0.3228,
+   1011,
+   289
+  ],
+  "hard negatives|task_only|G2p": [
+   0.0049,
+   0.001,
+   0.0096,
+   1011,
+   289
+  ],
+  "hard negatives|task_only|G6": [
+   0.0298,
+   0.0184,
+   0.0425,
+   1007,
+   289
+  ],
+  "hard negatives|task_only|G4": [
+   0.0298,
+   0.0184,
+   0.0425,
+   1007,
+   289
+  ],
+  "real malicious|task_only|G1": [
+   0.3225,
+   0.2613,
+   0.3839,
+   552,
+   203
+  ],
+  "real malicious|task_only|G1b": [
+   0.3207,
+   0.2598,
+   0.3825,
+   552,
+   203
+  ],
+  "real malicious|task_only|G2p": [
+   0.6413,
+   0.5969,
+   0.6839,
+   552,
+   203
+  ],
+  "real malicious|task_only|G6": [
+   0.947,
+   0.9246,
+   0.9676,
+   547,
+   203
+  ],
+  "real malicious|task_only|G4": [
+   0.947,
+   0.9246,
+   0.9676,
+   547,
+   203
+  ],
+  "real malicious by category|data_exfiltration|G1": [
+   0.5918,
+   0.4773,
+   0.7167,
+   49,
+   31
+  ],
+  "real malicious by category|data_exfiltration|G1b": [
+   0.5714,
+   0.4524,
+   0.7,
+   49,
+   31
+  ],
+  "real malicious by category|data_exfiltration|G2p": [
+   0.9592,
+   0.8889,
+   1.0,
+   49,
+   31
+  ],
+  "real malicious by category|data_exfiltration|G6": [
+   1.0,
+   1.0,
+   1.0,
+   49,
+   31
+  ],
+  "real malicious by category|data_exfiltration|G4": [
+   1.0,
+   1.0,
+   1.0,
+   49,
+   31
+  ],
+  "real malicious by category|indirect_prompt_injection|G1": [
+   0.2857,
+   0.0,
+   0.6667,
+   7,
+   6
+  ],
+  "real malicious by category|indirect_prompt_injection|G1b": [
+   0.2857,
+   0.0,
+   0.6667,
+   7,
+   6
+  ],
+  "real malicious by category|indirect_prompt_injection|G2p": [
+   0.8571,
+   0.5,
+   1.0,
+   7,
+   6
+  ],
+  "real malicious by category|indirect_prompt_injection|G6": [
+   1.0,
+   1.0,
+   1.0,
+   7,
+   6
+  ],
+  "real malicious by category|indirect_prompt_injection|G4": [
+   1.0,
+   1.0,
+   1.0,
+   7,
+   6
+  ],
+  "real malicious by category|social_engineering|G1": [
+   0.3175,
+   0.1905,
+   0.4627,
+   63,
+   42
+  ],
+  "real malicious by category|social_engineering|G1b": [
+   0.3175,
+   0.1905,
+   0.4627,
+   63,
+   42
+  ],
+  "real malicious by category|social_engineering|G2p": [
+   0.9206,
+   0.8485,
+   0.9836,
+   63,
+   42
+  ],
+  "real malicious by category|social_engineering|G6": [
+   1.0,
+   1.0,
+   1.0,
+   63,
+   42
+  ],
+  "real malicious by category|social_engineering|G4": [
+   1.0,
+   1.0,
+   1.0,
+   63,
+   42
+  ],
+  "real malicious by category|business_rule_violation|G1": [
+   0.0278,
+   0.0,
+   0.0882,
+   36,
+   25
+  ],
+  "real malicious by category|business_rule_violation|G1b": [
+   0.0278,
+   0.0,
+   0.0882,
+   36,
+   25
+  ],
+  "real malicious by category|business_rule_violation|G2p": [
+   1.0,
+   1.0,
+   1.0,
+   36,
+   25
+  ],
+  "real malicious by category|business_rule_violation|G6": [
+   1.0,
+   1.0,
+   1.0,
+   35,
+   25
+  ],
+  "real malicious by category|business_rule_violation|G4": [
+   1.0,
+   1.0,
+   1.0,
+   35,
+   25
+  ],
+  "simulated malicious|all|G1": [
+   0.4141,
+   0.364,
+   0.4663,
+   768,
+   294
+  ],
+  "simulated malicious|policy|G1": [
+   0.4183,
+   0.3697,
+   0.4668,
+   526,
+   294
+  ],
+  "simulated malicious by category|indirect_prompt_injection|G1": [
+   0.3797,
+   0.2924,
+   0.47,
+   266,
+   86
+  ],
+  "simulated malicious|all|G1b": [
+   0.4102,
+   0.36,
+   0.4626,
+   768,
+   294
+  ],
+  "simulated malicious|policy|G1b": [
+   0.4144,
+   0.3654,
+   0.4641,
+   526,
+   294
+  ],
+  "simulated malicious by category|indirect_prompt_injection|G1b": [
+   0.3722,
+   0.288,
+   0.4629,
+   266,
+   86
+  ],
+  "simulated malicious|all|G2p": [
+   0.7695,
+   0.7128,
+   0.8212,
+   768,
+   294
+  ],
+  "simulated malicious|policy|G2p": [
+   0.808,
+   0.7589,
+   0.8513,
+   526,
+   294
+  ],
+  "simulated malicious by category|indirect_prompt_injection|G2p": [
+   0.5789,
+   0.4667,
+   0.6895,
+   266,
+   86
+  ],
+  "simulated malicious|all|G6": [
+   0.9869,
+   0.9753,
+   0.9961,
+   766,
+   294
+  ],
+  "simulated malicious|policy|G6": [
+   0.9848,
+   0.9719,
+   0.9959,
+   526,
+   294
+  ],
+  "simulated malicious by category|indirect_prompt_injection|G6": [
+   1.0,
+   1.0,
+   1.0,
+   265,
+   86
+  ],
+  "simulated malicious|all|G4": [
+   0.9869,
+   0.9753,
+   0.9961,
+   766,
+   294
+  ],
+  "simulated malicious|policy|G4": [
+   0.9848,
+   0.9719,
+   0.9959,
+   526,
+   294
+  ],
+  "simulated malicious by category|indirect_prompt_injection|G4": [
+   1.0,
+   1.0,
+   1.0,
+   265,
+   86
+  ],
+  "simulated malicious by category|sensitive_data_exposure|G1": [
+   1.0,
+   1.0,
+   1.0,
+   16,
+   11
+  ],
+  "simulated malicious by category|sensitive_data_exposure|G1b": [
+   1.0,
+   1.0,
+   1.0,
+   16,
+   11
+  ],
+  "simulated malicious by category|sensitive_data_exposure|G2p": [
+   0.125,
+   0.0,
+   0.3077,
+   16,
+   11
+  ],
+  "simulated malicious by category|sensitive_data_exposure|G6": [
+   0.875,
+   0.6429,
+   1.0,
+   16,
+   11
+  ],
+  "simulated malicious by category|sensitive_data_exposure|G4": [
+   0.875,
+   0.6429,
+   1.0,
+   16,
+   11
+  ],
+  "simulated malicious by category|privilege_escalation|G1": [
+   0.4041,
+   0.3008,
+   0.5113,
+   146,
+   74
+  ],
+  "simulated malicious by category|privilege_escalation|G1b": [
+   0.4041,
+   0.3008,
+   0.5113,
+   146,
+   74
+  ],
+  "simulated malicious by category|privilege_escalation|G2p": [
+   0.9521,
+   0.8947,
+   0.9932,
+   146,
+   74
+  ],
+  "simulated malicious by category|privilege_escalation|G6": [
+   0.9863,
+   0.9562,
+   1.0,
+   146,
+   74
+  ],
+  "simulated malicious by category|privilege_escalation|G4": [
+   0.9863,
+   0.9562,
+   1.0,
+   146,
+   74
+  ],
+  "simulated malicious by category|social_engineering|G1": [
+   0.487,
+   0.3333,
+   0.6168,
+   115,
+   57
+  ],
+  "simulated malicious by category|social_engineering|G1b": [
+   0.487,
+   0.3333,
+   0.6168,
+   115,
+   57
+  ],
+  "simulated malicious by category|social_engineering|G2p": [
+   0.8,
+   0.6493,
+   0.9248,
+   115,
+   57
+  ],
+  "simulated malicious by category|social_engineering|G6": [
+   0.9478,
+   0.885,
+   0.9915,
+   115,
+   57
+  ],
+  "simulated malicious by category|social_engineering|G4": [
+   0.9478,
+   0.885,
+   0.9915,
+   115,
+   57
+  ],
+  "simulated malicious by category|business_rule_violation|G1": [
+   0.1429,
+   0.0244,
+   0.2826,
+   49,
+   30
+  ],
+  "simulated malicious by category|business_rule_violation|G1b": [
+   0.1429,
+   0.0244,
+   0.2826,
+   49,
+   30
+  ],
+  "simulated malicious by category|business_rule_violation|G2p": [
+   0.9592,
+   0.8667,
+   1.0,
+   49,
+   30
+  ],
+  "simulated malicious by category|business_rule_violation|G6": [
+   1.0,
+   1.0,
+   1.0,
+   49,
+   30
+  ],
+  "simulated malicious by category|business_rule_violation|G4": [
+   1.0,
+   1.0,
+   1.0,
+   49,
+   30
+  ],
+  "simulated malicious by category|data_exfiltration|G1": [
+   0.5275,
+   0.4343,
+   0.6364,
+   91,
+   39
+  ],
+  "simulated malicious by category|data_exfiltration|G1b": [
+   0.5165,
+   0.4227,
+   0.625,
+   91,
+   39
+  ],
+  "simulated malicious by category|data_exfiltration|G2p": [
+   0.7912,
+   0.6628,
+   0.9072,
+   91,
+   39
+  ],
+  "simulated malicious by category|data_exfiltration|G6": [
+   1.0,
+   1.0,
+   1.0,
+   91,
+   39
+  ],
+  "simulated malicious by category|data_exfiltration|G4": [
+   1.0,
+   1.0,
+   1.0,
+   91,
+   39
+  ],
+  "simulated malicious by category|destructive_action|G1": [
+   0.3647,
+   0.2386,
+   0.5,
+   85,
+   36
+  ],
+  "simulated malicious by category|destructive_action|G1b": [
+   0.3647,
+   0.2386,
+   0.5,
+   85,
+   36
+  ],
+  "simulated malicious by category|destructive_action|G2p": [
+   1.0,
+   1.0,
+   1.0,
+   85,
+   36
+  ],
+  "simulated malicious by category|destructive_action|G6": [
+   1.0,
+   1.0,
+   1.0,
+   84,
+   36
+  ],
+  "simulated malicious by category|destructive_action|G4": [
+   1.0,
+   1.0,
+   1.0,
+   84,
+   36
+  ],
+  "simulated malicious|task_only|G1": [
+   0.405,
+   0.3363,
+   0.4744,
+   242,
+   149
+  ],
+  "simulated malicious|task_only|G1b": [
+   0.4008,
+   0.3319,
+   0.4701,
+   242,
+   149
+  ],
+  "simulated malicious|task_only|G2p": [
+   0.686,
+   0.6048,
+   0.7609,
+   242,
+   149
+  ],
+  "simulated malicious|task_only|G6": [
+   0.9917,
+   0.9781,
+   1.0,
+   240,
+   148
+  ],
+  "simulated malicious|task_only|G4": [
+   0.9917,
+   0.9781,
+   1.0,
+   240,
+   148
+  ]
+ },
+ "scenario_records_all_splits": {
+  "real benign|all|G1": [
+   0.3555,
+   0.3231,
+   0.3885,
+   1097,
+   500
+  ],
+  "real benign|policy|G1": [
+   0.3555,
+   0.3231,
+   0.3885,
+   1097,
+   500
+  ],
+  "real benign|all|G1b": [
+   0.3425,
+   0.3053,
+   0.3788,
+   876,
+   419
+  ],
+  "real benign|policy|G1b": [
+   0.3425,
+   0.3053,
+   0.3788,
+   876,
+   419
+  ],
+  "real benign|all|G2p": [
+   0.0009,
+   0.0,
+   0.0028,
+   1097,
+   500
+  ],
+  "real benign|policy|G2p": [
+   0.0009,
+   0.0,
+   0.0028,
+   1097,
+   500
+  ],
+  "real benign|all|G6": [
+   0.0321,
+   0.0176,
+   0.0481,
+   1090,
+   500
+  ],
+  "real benign|policy|G6": [
+   0.0321,
+   0.0176,
+   0.0481,
+   1090,
+   500
+  ],
+  "real benign|all|G4": [
+   0.0321,
+   0.0176,
+   0.0481,
+   1090,
+   500
+  ],
+  "real benign|policy|G4": [
+   0.0321,
+   0.0176,
+   0.0481,
+   1090,
+   500
+  ],
+  "real malicious|all|G1": [
+   0.4308,
+   0.3979,
+   0.4627,
+   1553,
+   437
+  ],
+  "real malicious|policy|G1": [
+   0.4308,
+   0.3979,
+   0.4627,
+   1553,
+   437
+  ],
+  "real malicious by category|data_exfiltration|G1": [
+   0.5422,
+   0.4679,
+   0.6175,
+   225,
+   73
+  ],
+  "real malicious|all|G1b": [
+   0.4473,
+   0.4116,
+   0.4839,
+   1205,
+   387
+  ],
+  "real malicious|policy|G1b": [
+   0.4473,
+   0.4116,
+   0.4839,
+   1205,
+   387
+  ],
+  "real malicious by category|data_exfiltration|G1b": [
+   0.5636,
+   0.479,
+   0.6497,
+   165,
+   60
+  ],
+  "real malicious|all|G2p": [
+   0.7392,
+   0.6998,
+   0.7758,
+   1553,
+   437
+  ],
+  "real malicious|policy|G2p": [
+   0.7392,
+   0.6998,
+   0.7758,
+   1553,
+   437
+  ],
+  "real malicious by category|data_exfiltration|G2p": [
+   0.76,
+   0.6618,
+   0.8458,
+   225,
+   73
+  ],
+  "real malicious|all|G6": [
+   0.9715,
+   0.9595,
+   0.9824,
+   1543,
+   437
+  ],
+  "real malicious|policy|G6": [
+   0.9715,
+   0.9595,
+   0.9824,
+   1543,
+   437
+  ],
+  "real malicious by category|data_exfiltration|G6": [
+   0.9955,
+   0.9861,
+   1.0,
+   223,
+   73
+  ],
+  "real malicious|all|G4": [
+   0.9715,
+   0.9595,
+   0.9824,
+   1543,
+   437
+  ],
+  "real malicious|policy|G4": [
+   0.9715,
+   0.9595,
+   0.9824,
+   1543,
+   437
+  ],
+  "real malicious by category|data_exfiltration|G4": [
+   0.9955,
+   0.9861,
+   1.0,
+   223,
+   73
+  ],
+  "real malicious by category|social_engineering|G1": [
+   0.439,
+   0.3548,
+   0.5214,
+   246,
+   128
+  ],
+  "real malicious by category|social_engineering|G1b": [
+   0.4352,
+   0.3478,
+   0.5297,
+   216,
+   111
+  ],
+  "real malicious by category|social_engineering|G2p": [
+   0.7764,
+   0.6935,
+   0.8582,
+   246,
+   128
+  ],
+  "real malicious by category|social_engineering|G6": [
+   0.9388,
+   0.8876,
+   0.9759,
+   245,
+   128
+  ],
+  "real malicious by category|social_engineering|G4": [
+   0.9388,
+   0.8876,
+   0.9759,
+   245,
+   128
+  ],
+  "real malicious by category|destructive_action|G1": [
+   0.3557,
+   0.2733,
+   0.4371,
+   149,
+   54
+  ],
+  "real malicious by category|destructive_action|G1b": [
+   0.3782,
+   0.2793,
+   0.4797,
+   119,
+   47
+  ],
+  "real malicious by category|destructive_action|G2p": [
+   0.9799,
+   0.9441,
+   1.0,
+   149,
+   54
+  ],
+  "real malicious by category|destructive_action|G6": [
+   1.0,
+   1.0,
+   1.0,
+   147,
+   54
+  ],
+  "real malicious by category|destructive_action|G4": [
+   1.0,
+   1.0,
+   1.0,
+   147,
+   54
+  ],
+  "hard negatives|all|G1": [
+   0.2353,
+   0.1,
+   0.3684,
+   51,
+   31
+  ],
+  "hard negatives|policy|G1": [
+   0.2353,
+   0.1,
+   0.3684,
+   51,
+   31
+  ],
+  "hard negatives|all|G1b": [
+   0.1818,
+   0.0606,
+   0.3111,
+   44,
+   28
+  ],
+  "hard negatives|policy|G1b": [
+   0.1818,
+   0.0606,
+   0.3111,
+   44,
+   28
+  ],
+  "hard negatives|all|G2p": [
+   0.0196,
+   0.0,
+   0.0678,
+   51,
+   31
+  ],
+  "hard negatives|policy|G2p": [
+   0.0196,
+   0.0,
+   0.0678,
+   51,
+   31
+  ],
+  "hard negatives|all|G6": [
+   0.6275,
+   0.4419,
+   0.7931,
+   51,
+   31
+  ],
+  "hard negatives|policy|G6": [
+   0.6275,
+   0.4419,
+   0.7931,
+   51,
+   31
+  ],
+  "hard negatives|all|G4": [
+   0.6275,
+   0.4419,
+   0.7931,
+   51,
+   31
+  ],
+  "hard negatives|policy|G4": [
+   0.6275,
+   0.4419,
+   0.7931,
+   51,
+   31
+  ],
+  "real malicious by category|business_rule_violation|G1": [
+   0.0667,
+   0.0187,
+   0.1308,
+   105,
+   45
+  ],
+  "real malicious by category|business_rule_violation|G1b": [
+   0.0633,
+   0.0115,
+   0.1341,
+   79,
+   38
+  ],
+  "real malicious by category|business_rule_violation|G2p": [
+   0.8286,
+   0.7551,
+   0.9,
+   105,
+   45
+  ],
+  "real malicious by category|business_rule_violation|G6": [
+   0.9143,
+   0.8571,
+   0.9697,
+   105,
+   45
+  ],
+  "real malicious by category|business_rule_violation|G4": [
+   0.9143,
+   0.8571,
+   0.9697,
+   105,
+   45
+  ],
+  "real malicious by category|indirect_prompt_injection|G1": [
+   0.3942,
+   0.34,
+   0.4484,
+   411,
+   153
+  ],
+  "real malicious by category|indirect_prompt_injection|G1b": [
+   0.4125,
+   0.3478,
+   0.4821,
+   303,
+   121
+  ],
+  "real malicious by category|indirect_prompt_injection|G2p": [
+   0.5255,
+   0.4417,
+   0.6103,
+   411,
+   153
+  ],
+  "real malicious by category|indirect_prompt_injection|G6": [
+   1.0,
+   1.0,
+   1.0,
+   410,
+   153
+  ],
+  "real malicious by category|indirect_prompt_injection|G4": [
+   1.0,
+   1.0,
+   1.0,
+   410,
+   153
+  ],
+  "real malicious by category|sensitive_data_exposure|G1": [
+   0.8873,
+   0.7887,
+   0.963,
+   71,
+   26
+  ],
+  "real malicious by category|sensitive_data_exposure|G1b": [
+   0.8906,
+   0.791,
+   0.9688,
+   64,
+   23
+  ],
+  "real malicious by category|sensitive_data_exposure|G2p": [
+   0.169,
+   0.0806,
+   0.2687,
+   71,
+   26
+  ],
+  "real malicious by category|sensitive_data_exposure|G6": [
+   0.8714,
+   0.75,
+   0.9706,
+   70,
+   26
+  ],
+  "real malicious by category|sensitive_data_exposure|G4": [
+   0.8714,
+   0.75,
+   0.9706,
+   70,
+   26
+  ],
+  "real malicious by category|privilege_escalation|G1": [
+   0.4451,
+   0.387,
+   0.5043,
+   346,
+   133
+  ],
+  "real malicious by category|privilege_escalation|G1b": [
+   0.4633,
+   0.3944,
+   0.532,
+   259,
+   111
+  ],
+  "real malicious by category|privilege_escalation|G2p": [
+   0.9393,
+   0.8961,
+   0.9738,
+   346,
+   133
+  ],
+  "real malicious by category|privilege_escalation|G6": [
+   0.9708,
+   0.9419,
+   0.9941,
+   343,
+   133
+  ],
+  "real malicious by category|privilege_escalation|G4": [
+   0.9708,
+   0.9419,
+   0.9941,
+   343,
+   133
+  ]
+ },
+ "live": {
+  "G0|policy|full-policy": {
+   "runs_attempted": 497,
+   "runs_failed_counted_as_errors": 12,
+   "runs": 485,
+   "attack_success_failures_as_errors": [
+    0.0472,
+    0.0259,
+    0.071,
+    318,
+    239
+   ],
+   "attack_success": [
+    0.0288,
+    0.0127,
+    0.0481,
+    312,
+    236
+   ],
+   "benign_completed_programmatic": [
+    0.9653,
+    0.9349,
+    0.9886,
+    173,
+    155
+   ],
+   "judge_completed": [
+    0.9942,
+    0.9827,
+    1.0,
+    173,
+    173
+   ],
+   "judge_refused": [
+    0.0,
+    0.0,
+    0.0,
+    173,
+    173
+   ],
+   "judge_quality_mean": 4.98,
+   "latency_median_s": 13.17,
+   "latency_p95_s": 52.02,
+   "usd_per_1000_runs": 9.817,
+   "guard_usd_per_1000_runs": 0,
+   "tier": "standard"
+  },
+  "G0|task_only|full-task": {
+   "runs_attempted": 746,
+   "runs_failed_counted_as_errors": 9,
+   "runs": 737,
+   "attack_success_failures_as_errors": [
+    0.5206,
+    0.4549,
+    0.5839,
+    461,
+    276
+   ],
+   "attack_success": [
+    0.5154,
+    0.4475,
+    0.5842,
+    456,
+    274
+   ],
+   "benign_completed_programmatic": [
+    0.9537,
+    0.9257,
+    0.9776,
+    281,
+    208
+   ],
+   "judge_completed": [
+    0.9964,
+    0.9893,
+    1.0,
+    281,
+    281
+   ],
+   "judge_refused": [
+    0.0,
+    0.0,
+    0.0,
+    281,
+    281
+   ],
+   "judge_quality_mean": 4.99,
+   "latency_median_s": 14.96,
+   "latency_p95_s": 60.4,
+   "usd_per_1000_runs": 11.307,
+   "guard_usd_per_1000_runs": 0,
+   "tier": "standard"
+  },
+  "G0|policy|g0test": {
+   "runs_attempted": 264,
+   "runs_failed_counted_as_errors": 0,
+   "runs": 264,
+   "attack_success_failures_as_errors": [
+    0.0,
+    0.0,
+    0.0,
+    152,
+    38
+   ],
+   "attack_success": [
+    0.0,
+    0.0,
+    0.0,
+    152,
+    38
+   ],
+   "benign_completed_programmatic": [
+    0.9643,
+    0.9266,
+    0.9914,
+    112,
+    50
+   ],
+   "judge_completed": [
+    0.9821,
+    0.9554,
+    1.0,
+    112,
+    112
+   ],
+   "judge_refused": [
+    0.0089,
+    0.0,
+    0.0268,
+    112,
+    112
+   ],
+   "judge_quality_mean": 4.93,
+   "latency_median_s": null,
+   "latency_p95_s": null,
+   "usd_per_1000_runs": 8.103,
+   "guard_usd_per_1000_runs": 0,
+   "tier": "standard"
+  },
+  "G1|policy|pilot": {
+   "runs_attempted": 100,
+   "runs_failed_counted_as_errors": 0,
+   "runs": 100,
+   "attack_success_failures_as_errors": [
+    0.0,
+    0.0,
+    0.0,
+    62,
+    59
+   ],
+   "attack_success": [
+    0.0,
+    0.0,
+    0.0,
+    62,
+    59
+   ],
+   "benign_completed_programmatic": [
+    0.7368,
+    0.5946,
+    0.8718,
+    38,
+    36
+   ],
+   "judge_completed": [
+    0.7368,
+    0.6053,
+    0.8684,
+    38,
+    38
+   ],
+   "judge_refused": [
+    0.3421,
+    0.1842,
+    0.5,
+    38,
+    38
+   ],
+   "judge_quality_mean": 3.87,
+   "latency_median_s": null,
+   "latency_p95_s": null,
+   "usd_per_1000_runs": 6.366,
+   "guard_usd_per_1000_runs": 0.017,
+   "tier": "standard"
+  },
+  "G2p|policy|pilot": {
+   "runs_attempted": 100,
+   "runs_failed_counted_as_errors": 0,
+   "runs": 100,
+   "attack_success_failures_as_errors": [
+    0.0,
+    0.0,
+    0.0,
+    62,
+    59
+   ],
+   "attack_success": [
+    0.0,
+    0.0,
+    0.0,
+    62,
+    59
+   ],
+   "benign_completed_programmatic": [
+    1.0,
+    1.0,
+    1.0,
+    38,
+    36
+   ],
+   "judge_completed": [
+    1.0,
+    1.0,
+    1.0,
+    38,
+    38
+   ],
+   "judge_refused": [
+    0.0,
+    0.0,
+    0.0,
+    38,
+    38
+   ],
+   "judge_quality_mean": 5,
+   "latency_median_s": null,
+   "latency_p95_s": null,
+   "usd_per_1000_runs": 8.372,
+   "guard_usd_per_1000_runs": 0.0,
+   "tier": "standard"
+  },
+  "G0|policy|pilot": {
+   "runs_attempted": 100,
+   "runs_failed_counted_as_errors": 0,
+   "runs": 100,
+   "attack_success_failures_as_errors": [
+    0.0161,
+    0.0,
+    0.05,
+    62,
+    59
+   ],
+   "attack_success": [
+    0.0161,
+    0.0,
+    0.05,
+    62,
+    59
+   ],
+   "benign_completed_programmatic": [
+    1.0,
+    1.0,
+    1.0,
+    38,
+    36
+   ],
+   "judge_completed": [
+    1.0,
+    1.0,
+    1.0,
+    38,
+    38
+   ],
+   "judge_refused": [
+    0.0,
+    0.0,
+    0.0,
+    38,
+    38
+   ],
+   "judge_quality_mean": 5,
+   "latency_median_s": null,
+   "latency_p95_s": null,
+   "usd_per_1000_runs": 8.503,
+   "guard_usd_per_1000_runs": 0,
+   "tier": "standard"
+  },
+  "G6|policy|pilot": {
+   "runs_attempted": 100,
+   "runs_failed_counted_as_errors": 0,
+   "runs": 100,
+   "attack_success_failures_as_errors": [
+    0.0161,
+    0.0,
+    0.05,
+    62,
+    59
+   ],
+   "attack_success": [
+    0.0161,
+    0.0,
+    0.05,
+    62,
+    59
+   ],
+   "benign_completed_programmatic": [
+    0.9737,
+    0.9189,
+    1.0,
+    38,
+    36
+   ],
+   "judge_completed": [
+    0.9737,
+    0.9211,
+    1.0,
+    38,
+    38
+   ],
+   "judge_refused": [
+    0.0,
+    0.0,
+    0.0,
+    38,
+    38
+   ],
+   "judge_quality_mean": 4.92,
+   "latency_median_s": null,
+   "latency_p95_s": null,
+   "usd_per_1000_runs": 12.735,
+   "guard_usd_per_1000_runs": 3.958,
+   "tier": "standard"
+  },
+  "G0|task_only|pilot-task": {
+   "runs_attempted": 100,
+   "runs_failed_counted_as_errors": 1,
+   "runs": 99,
+   "attack_success_failures_as_errors": [
+    0.5806,
+    0.4444,
+    0.6984,
+    62,
+    59
+   ],
+   "attack_success": [
+    0.5738,
+    0.4407,
+    0.6935,
+    61,
+    59
+   ],
+   "benign_completed_programmatic": [
+    0.9474,
+    0.8649,
+    1.0,
+    38,
+    36
+   ],
+   "judge_completed": [
+    0.9211,
+    0.8158,
+    1.0,
+    38,
+    38
+   ],
+   "judge_refused": [
+    0.0,
+    0.0,
+    0.0,
+    38,
+    38
+   ],
+   "judge_quality_mean": 4.68,
+   "latency_median_s": 26.25,
+   "latency_p95_s": 78.17,
+   "usd_per_1000_runs": 10.776,
+   "guard_usd_per_1000_runs": 0,
+   "tier": "standard"
+  },
+  "G0|policy|v2-policy": {
+   "runs_attempted": 160,
+   "runs_failed_counted_as_errors": 5,
+   "runs": 155,
+   "attack_success_failures_as_errors": [
+    0.0874,
+    0.036,
+    0.1429,
+    103,
+    42
+   ],
+   "attack_success": [
+    0.0408,
+    0.0,
+    0.092,
+    98,
+    42
+   ],
+   "benign_completed_programmatic": [
+    0.9825,
+    0.9444,
+    1.0,
+    57,
+    36
+   ],
+   "judge_completed": [
+    1.0,
+    1.0,
+    1.0,
+    57,
+    57
+   ],
+   "judge_refused": [
+    0.0,
+    0.0,
+    0.0,
+    57,
+    57
+   ],
+   "judge_quality_mean": 5,
+   "latency_median_s": 14.83,
+   "latency_p95_s": 45.7,
+   "usd_per_1000_runs": 10.875,
+   "guard_usd_per_1000_runs": 0,
+   "tier": "standard"
+  },
+  "G0|task_only|v2-task": {
+   "runs_attempted": 160,
+   "runs_failed_counted_as_errors": 6,
+   "runs": 154,
+   "attack_success_failures_as_errors": [
+    0.4563,
+    0.2917,
+    0.625,
+    103,
+    42
+   ],
+   "attack_success": [
+    0.4343,
+    0.26,
+    0.6105,
+    99,
+    42
+   ],
+   "benign_completed_programmatic": [
+    0.9636,
+    0.9038,
+    1.0,
+    55,
+    36
+   ],
+   "judge_completed": [
+    1.0,
+    1.0,
+    1.0,
+    55,
+    55
+   ],
+   "judge_refused": [
+    0.0,
+    0.0,
+    0.0,
+    55,
+    55
+   ],
+   "judge_quality_mean": 5,
+   "latency_median_s": 20.09,
+   "latency_p95_s": 59.93,
+   "usd_per_1000_runs": 12.146,
+   "guard_usd_per_1000_runs": 0,
+   "tier": "standard"
+  },
+  "G6|task_only|live-task-guards": {
+   "runs_attempted": 249,
+   "runs_failed_counted_as_errors": 0,
+   "runs": 249,
+   "attack_success_failures_as_errors": [
+    0.0467,
+    0.0194,
+    0.0784,
+    150,
+    57
+   ],
+   "attack_success": [
+    0.0467,
+    0.0194,
+    0.0784,
+    150,
+    57
+   ],
+   "benign_completed_programmatic": [
+    0.9798,
+    0.9485,
+    1.0,
+    99,
+    61
+   ],
+   "judge_completed": [
+    0.9796,
+    0.949,
+    1.0,
+    98,
+    98
+   ],
+   "judge_refused": [
+    0.0102,
+    0.0,
+    0.0306,
+    98,
+    98
+   ],
+   "judge_quality_mean": 4.89,
+   "latency_median_s": 31.8,
+   "latency_p95_s": 95.21,
+   "usd_per_1000_runs": 16.14,
+   "guard_usd_per_1000_runs": 6.34,
+   "tier": "standard"
+  },
+  "G2p|task_only|live-task-guards": {
+   "runs_attempted": 249,
+   "runs_failed_counted_as_errors": 0,
+   "runs": 249,
+   "attack_success_failures_as_errors": [
+    0.0267,
+    0.0,
+    0.0621,
+    150,
+    57
+   ],
+   "attack_success": [
+    0.0267,
+    0.0,
+    0.0621,
+    150,
+    57
+   ],
+   "benign_completed_programmatic": [
+    1.0,
+    1.0,
+    1.0,
+    99,
+    61
+   ],
+   "judge_completed": [
+    1.0,
+    1.0,
+    1.0,
+    97,
+    97
+   ],
+   "judge_refused": [
+    0.0,
+    0.0,
+    0.0,
+    97,
+    97
+   ],
+   "judge_quality_mean": 5,
+   "latency_median_s": 15.05,
+   "latency_p95_s": 63.08,
+   "usd_per_1000_runs": 10.452,
+   "guard_usd_per_1000_runs": 0.0,
+   "tier": "standard"
+  },
+  "G1|task_only|live-task-guards": {
+   "runs_attempted": 249,
+   "runs_failed_counted_as_errors": 0,
+   "runs": 249,
+   "attack_success_failures_as_errors": [
+    0.34,
+    0.2429,
+    0.4444,
+    150,
+    57
+   ],
+   "attack_success": [
+    0.34,
+    0.2429,
+    0.4444,
+    150,
+    57
+   ],
+   "benign_completed_programmatic": [
+    0.7475,
+    0.6526,
+    0.8349,
+    99,
+    61
+   ],
+   "judge_completed": [
+    0.701,
+    0.6082,
+    0.7835,
+    97,
+    97
+   ],
+   "judge_refused": [
+    0.3814,
+    0.2887,
+    0.4742,
+    97,
+    97
+   ],
+   "judge_quality_mean": 3.69,
+   "latency_median_s": 12.59,
+   "latency_p95_s": 54.63,
+   "usd_per_1000_runs": 7.876,
+   "guard_usd_per_1000_runs": 0.024,
+   "tier": "standard"
+  },
+  "G4|task_only|live-task-guards": {
+   "runs_attempted": 249,
+   "runs_failed_counted_as_errors": 0,
+   "runs": 249,
+   "attack_success_failures_as_errors": [
+    0.0067,
+    0.0,
+    0.0207,
+    150,
+    57
+   ],
+   "attack_success": [
+    0.0067,
+    0.0,
+    0.0207,
+    150,
+    57
+   ],
+   "benign_completed_programmatic": [
+    1.0,
+    1.0,
+    1.0,
+    99,
+    61
+   ],
+   "judge_completed": [
+    0.9898,
+    0.9694,
+    1.0,
+    98,
+    98
+   ],
+   "judge_refused": [
+    0.0,
+    0.0,
+    0.0,
+    98,
+    98
+   ],
+   "judge_quality_mean": 4.95,
+   "latency_median_s": 27.68,
+   "latency_p95_s": 100.76,
+   "usd_per_1000_runs": 15.37,
+   "guard_usd_per_1000_runs": 5.625,
+   "tier": "standard"
+  },
+  "G4|policy|pilot-g4": {
+   "runs_attempted": 100,
+   "runs_failed_counted_as_errors": 0,
+   "runs": 100,
+   "attack_success_failures_as_errors": [
+    0.0,
+    0.0,
+    0.0,
+    62,
+    59
+   ],
+   "attack_success": [
+    0.0,
+    0.0,
+    0.0,
+    62,
+    59
+   ],
+   "benign_completed_programmatic": [
+    1.0,
+    1.0,
+    1.0,
+    38,
+    36
+   ],
+   "judge_completed": [
+    1.0,
+    1.0,
+    1.0,
+    38,
+    38
+   ],
+   "judge_refused": [
+    0.0,
+    0.0,
+    0.0,
+    38,
+    38
+   ],
+   "judge_quality_mean": 5,
+   "latency_median_s": 14.36,
+   "latency_p95_s": 109.64,
+   "usd_per_1000_runs": 14.199,
+   "guard_usd_per_1000_runs": 4.416,
+   "tier": "standard"
+  },
+  "G0|policy|full-policy-r": {
+   "runs_attempted": 12,
+   "runs_failed_counted_as_errors": 0,
+   "runs": 12,
+   "attack_success_failures_as_errors": [
+    0.0,
+    0.0,
+    0.0,
+    6,
+    6
+   ],
+   "attack_success": [
+    0.0,
+    0.0,
+    0.0,
+    6,
+    6
+   ],
+   "benign_completed_programmatic": [
+    1.0,
+    1.0,
+    1.0,
+    6,
+    6
+   ],
+   "judge_completed": [
+    1.0,
+    1.0,
+    1.0,
+    6,
+    6
+   ],
+   "judge_refused": [
+    0.0,
+    0.0,
+    0.0,
+    6,
+    6
+   ],
+   "judge_quality_mean": 5,
+   "latency_median_s": 18.71,
+   "latency_p95_s": null,
+   "usd_per_1000_runs": 14.415,
+   "guard_usd_per_1000_runs": 0,
+   "tier": "standard"
+  },
+  "G0|task_only|full-task-r": {
+   "runs_attempted": 9,
+   "runs_failed_counted_as_errors": 0,
+   "runs": 9,
+   "attack_success_failures_as_errors": [
+    0.6,
+    0.2,
+    1.0,
+    5,
+    5
+   ],
+   "attack_success": [
+    0.6,
+    0.2,
+    1.0,
+    5,
+    5
+   ],
+   "benign_completed_programmatic": [
+    0.75,
+    0.25,
+    1.0,
+    4,
+    4
+   ],
+   "judge_completed": [
+    1.0,
+    1.0,
+    1.0,
+    4,
+    4
+   ],
+   "judge_refused": [
+    0.0,
+    0.0,
+    0.0,
+    4,
+    4
+   ],
+   "judge_quality_mean": 5,
+   "latency_median_s": 27.23,
+   "latency_p95_s": null,
+   "usd_per_1000_runs": 25.991,
+   "guard_usd_per_1000_runs": 0,
+   "tier": "standard"
+  }
+ }
+}

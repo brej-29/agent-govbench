@@ -1,0 +1,10 @@
+Agent GovBench (Google Cloud)
+Copyright 2026 brej-29
+
+Licensed under the Apache License, Version 2.0 (see LICENSE). The data, write-up and results under report/ and
+results/b_predictions/, and the Hugging Face dataset, are licensed under CC BY 4.0.
+
+infra/codelab/ contains a modified copy of Google's Agent Gateway codelab, Copyright 2026 Google LLC, Apache License,
+Version 2.0; see infra/codelab/NOTICE and infra/codelab/LICENSE.
+
+Not affiliated with or endorsed by Google. Product names are used to describe what was tested.
