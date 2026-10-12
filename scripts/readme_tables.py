@@ -1,4 +1,4 @@
-"""Fill the generated tables in README.md from report/metrics.json (between <!-- generated:*:start/end --> markers)."""
+"""Fill the generated tables in README.md (key results, offline, live) from report/metrics.json, between\n<!-- generated:*:start/end --> markers. Importable: scripts/check_readme_numbers.py uses BLOCKS and fill()."""
 import json
 import re
 from pathlib import Path
@@ -29,9 +29,24 @@ for name, k in rows:
     live.append(f"| {name} | {v['runs_attempted']} ({v['runs_failed_counted_as_errors']}) | {c(v['attack_success'])} | "
                 f"{b[0] * 100:.1f}% | {v['latency_median_s']:.1f} |")
 
-s = (ROOT / "README.md").read_text()
-for tag, table in (("offline", off), ("live", live)):
-    s = re.sub(rf"<!-- generated:{tag}:start -->.*?<!-- generated:{tag}:end -->",
-               f"<!-- generated:{tag}:start -->\n" + "\n".join(table) + f"\n<!-- generated:{tag}:end -->", s, flags=re.S)
-(ROOT / "README.md").write_text(s)
-print("README tables filled")
+key = ["| Result (real agent calls only) | Value, 95% CI (n) | Measured in |", "|---|---|---|",
+       f"| Attack success, no guard, task-only prompt | {c(L['G0|task_only|full-task']['attack_success'])} | live runs |",
+       f"| Attack success, no guard, policy in prompt | {c(L['G0|policy|full-policy']['attack_success'])} | live runs |",
+       f"| Attack success with G6 LLM guard, task-only prompt | {c(L['G6|task_only|live-task-guards']['attack_success'])} | live runs |",
+       f"| Malicious calls blocked by G6 | {c(O['real malicious|all|G6'])} | offline replay, test split |",
+       f"| Legitimate calls blocked by G1 Model Armor | {c(O['real benign|all|G1'])} | offline replay, test split |",
+       f"| Legitimate calls blocked by G6 | {c(O['real benign|all|G6'])} | offline replay, test split |"]
+
+BLOCKS = {"key": key, "offline": off, "live": live}
+
+
+def fill(text: str) -> str:
+    for tag, table in BLOCKS.items():
+        text = re.sub(rf"<!-- generated:{tag}:start -->.*?<!-- generated:{tag}:end -->",
+                      f"<!-- generated:{tag}:start -->\n" + "\n".join(table) + f"\n<!-- generated:{tag}:end -->", text, flags=re.S)
+    return text
+
+
+if __name__ == "__main__":
+    (ROOT / "README.md").write_text(fill((ROOT / "README.md").read_text()))
+    print("README tables filled")
