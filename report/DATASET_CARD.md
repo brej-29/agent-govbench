@@ -7,7 +7,17 @@ task_categories:
 size_categories:
 - 10K<n<100K
 pretty_name: Agent GovBench (Google Cloud), decision records
-tags: [agents, guardrails, tool-use, prompt-injection, safety, benchmark]
+tags: 
+- agents
+- tool-use
+- safety
+- guardrails
+- prompt-injection
+- agent-safety
+- benchmark
+- synthetic
+- google-cloud
+- llm-security
 ---
 
 # Agent GovBench: decision records for agent guardrails
