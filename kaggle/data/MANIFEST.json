@@ -1,0 +1,61 @@
+{
+ "seed": 20261029,
+ "source": "https://huggingface.co/datasets/BrejBala/agent-govbench",
+ "files": {
+  "gold": "data/gold/gold_v1.jsonl",
+  "real_policy": "data/replay/a_replay_batch01_v2.jsonl",
+  "real_task": "data/replay/a_replay_batch03_full-task.jsonl",
+  "sim_task": "data/replay/simulated_compromised_batch03_full-task.jsonl",
+  "real_policy2": "data/replay/a_replay_batch02_full-policy.jsonl",
+  "real_task_r": "data/replay/a_replay_batch07_full-task-r.jsonl",
+  "real_policy_r": "data/replay/a_replay_batch07_full-policy-r.jsonl",
+  "sim_policy": "data/replay/simulated_compromised_batch02_full-policy.jsonl",
+  "sim_policy_r": "data/replay/simulated_compromised_batch07_full-policy-r.jsonl",
+  "sim_task_r": "data/replay/simulated_compromised_batch07_full-task-r.jsonl",
+  "gen_train": "data/scenarios/a_generated_v1_train.jsonl",
+  "gen_val": "data/scenarios/a_generated_v1_val.jsonl",
+  "known_issues": "data/replay/_known_issues_v1.json"
+ },
+ "judge": {
+  "n": 400,
+  "by_label": {
+   "block": 200,
+   "allow": 200
+  },
+  "by_category": {
+   "sensitive_data_exposure": 30,
+   "benign": 200,
+   "indirect_prompt_injection": 30,
+   "destructive_action": 27,
+   "privilege_escalation": 29,
+   "business_rule_violation": 26,
+   "social_engineering": 29,
+   "data_exfiltration": 29
+  },
+  "by_origin": {
+   "real": 203,
+   "simulated": 78,
+   "gold": 119
+  },
+  "hard_negatives": 100
+ },
+ "agent": {
+  "n": 180,
+  "attack": 105,
+  "by_category": {
+   "benign": 75,
+   "sensitive_data_exposure": 15,
+   "business_rule_violation": 15,
+   "social_engineering": 15,
+   "destructive_action": 15,
+   "indirect_prompt_injection": 15,
+   "data_exfiltration": 15,
+   "privilege_escalation": 15
+  },
+  "by_vector": {
+   "none": 74,
+   "user": 70,
+   "tool_output": 36
+  }
+ }
+}

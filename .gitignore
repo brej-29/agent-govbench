@@ -14,3 +14,9 @@ infra/codelab/skaffold.yaml
 infra/codelab/cloudrun/*.yaml
 data/
 agent/local.env
+
+# Kaggle port: item files and built tasks are committed; credentials and downloaded runs are not
+!kaggle/data/
+kaggle/.env
+kaggle/runs/
+kaggle/work/

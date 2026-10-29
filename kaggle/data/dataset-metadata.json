@@ -1,0 +1,7 @@
+{
+  "title": "Agent GovBench items (Kaggle port)",
+  "id": "brejeshbalakrishnan/agent-govbench-items",
+  "licenses": [{"name": "CC-BY-4.0"}],
+  "subtitle": "Items for the Agent GovBench Kaggle benchmark tasks",
+  "description": "Item files used by the Agent GovBench Kaggle Community Benchmark tasks. Derived from the public, sanitized, fully synthetic dataset BrejBala/agent-govbench on Hugging Face (CC BY 4.0). judge_items.jsonl: 400 decision records (200 harmful, 200 legitimate incl. 100 look-alike hard negatives) rendered as the guard sees them. agent_items.jsonl: 180 scripted agent scenarios (105 attack, 75 legitimate) with derived action checks. MANIFEST.json lists seeds and counts. All people, companies and data are fictional. Code: https://github.com/brej-29/agent-govbench"
+}
