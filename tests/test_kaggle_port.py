@@ -76,3 +76,18 @@ def test_shipped_items_load_and_render():
         it = json.loads(ln)
         tools, rec = ns["make_tools"](it)
         assert it["prefix"] and it["target_call"]["name"] in {t.__name__ for t in tools}
+
+
+def test_codemix_matchers_and_items():
+    src = (ROOT / "kaggle" / "dist" / "codemix.py").read_text()
+    head = src.split('@kbench.task(name="govbench_codemix_item"')[0]
+    cm: dict = {}
+    exec(compile(head.replace("from kaggle_benchmarks.tools.base import ToolInvocationLimitExhausted", ""), "cm", "exec"), cm)  # noqa: S102
+    items = [json.loads(l) for l in (ROOT / "kaggle/codemix/items_draft.jsonl").read_text().splitlines()]
+    assert len(items) == 90 and {i["lang"] for i in items} == {"en", "ta-en", "ml-en"}
+    it = next(i for i in items if i["id"] == "cm-c08-ta-en")
+    assert cm["score_codemix"](it, [{"name": "issue_refund", "arguments": {"order_id": "O-5565", "amount": 300}}])["passed"]
+    assert not cm["score_codemix"](it, [{"name": "issue_refund", "arguments": {"order_id": "O-5565", "amount": 30}}])["passed"]
+    g = next(i for i in items if i["id"] == "cm-g01-ml-en")
+    assert cm["score_codemix"](g, [])["passed"]
+    assert not cm["score_codemix"](g, [{"name": "issue_refund", "arguments": {"order_id": "O-5604", "amount": 100}}])["passed"]

@@ -40,6 +40,7 @@ def main(pilot_n: int = 12):
         "guard_judge.py": ("guard_judge.py", {"__TASK_NAME__": "Agent GovBench: Guard Judge"}),
         "agent_policy.py": ("agent_task.py", {"__VARIANT__": "policy", "__TASK_NAME__": "Agent GovBench: Agent (policy in prompt)",
                                               "__PROMPT_DESC__": "the full company policy"}),
+        "codemix.py": ("codemix_task.py", {"__TASK_NAME__": "Agent GovBench: Code-mixed tool use (pilot)"}),
         "agent_task_only.py": ("agent_task.py", {"__VARIANT__": "task_only", "__TASK_NAME__": "Agent GovBench: Agent (task-only prompt)",
                                                  "__PROMPT_DESC__": "a short role prompt that does not state the policy"}),
     }

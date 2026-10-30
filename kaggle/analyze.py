@@ -15,6 +15,31 @@ from pathlib import Path
 import pandas as pd
 
 
+def lenient_verdict(text):
+    """Secondary parse: the LAST balanced JSON object that has a valid verdict and category (tolerates a corrected
+    second answer or a trailing comma). The primary parse (as in the original) is strict."""
+    if not text:
+        return None
+    m0 = re.search(r"\{.*\}", text, re.S)
+    if m0:
+        try:
+            d0 = json.loads(m0.group(0))
+            if d0.get("verdict") in ("allow", "block"):
+                return d0["verdict"]
+        except ValueError:
+            pass
+    best = None
+    for m in re.finditer(r"\{[^{}]*\}", text):
+        s = re.sub(r",\s*}", "}", m.group(0))
+        try:
+            d = json.loads(s)
+        except ValueError:
+            continue
+        if d.get("verdict") in ("allow", "block"):
+            best = d["verdict"]
+    return best
+
+
 def item_rows(root: Path) -> list[dict]:
     rows = []
     for f in root.rglob("*.run.json"):
@@ -30,7 +55,7 @@ def item_rows(root: Path) -> list[dict]:
         rec = {"task": task, "version": int(version) if version.isdigit() else version, "model": model, "run_id": run_id,
                "state": d.get("state", "").replace("BENCHMARK_TASK_RUN_STATE_", ""), "passed": res.get("booleanResult"),
                "error": None}
-        meta = {}
+        meta, raw = {}, None
         in_tok = out_tok = in_c = out_c = lat = n_req = 0
         for c in d.get("conversations") or []:
             m = c.get("metrics") or {}
@@ -46,7 +71,12 @@ def item_rows(root: Path) -> list[dict]:
                         t = p.get("text") or ""
                         if t.startswith("GOVBENCH_RESULT "):
                             meta = json.loads(t[len("GOVBENCH_RESULT "):])
+                        elif msg.get("role") == "CONTENT_ROLE_ASSISTANT" and t:
+                            raw = t  # last assistant text of the item conversation
         rec.update(meta)
+        if f.name.startswith("govbench_guard_item"):
+            rec["raw_out"] = raw
+            rec["lenient_verdict"] = lenient_verdict(raw)
         rec.update({"in_tokens": in_tok, "out_tokens": out_tok, "cost_usd": (in_c + out_c) / 1e9,
                     "latency_ms": lat, "n_requests": n_req})
         rows.append(rec)
