@@ -2,6 +2,13 @@
 
 Updated: 2026-10-29 (session 1). A fresh session can resume from this file.
 
+## Wake log
+- 2026-10-31 04:35 to 07:30 UTC: day-1 sweep had stalled while the session idled (the driver dies with the container; always run it
+  to completion within a wake). Restarted as queue_day2/day2b. Done so far (3 tasks each): gemini-3.8-flash, haiku-5-5, gpt-5.4-nano,
+  gpt-oss-120b, gemma-4-26b/31b, gemini-3.1-flash-lite, gemini-3.5-flash-lite, gpt-5.4-mini, haiku-4-5. gemini-3.1-pro: both agent tasks
+  (judge still to run, about $4). Quota used $17.6 of $100; today's window is spent (resets 04:35 UTC 1 Nov). Wake scheduled 04:45 UTC 1 Nov.
+- Next queue: gemini-3.1-pro judge, opus-5-5 (split across windows), sonnet-5-5, gemini-3.6-flash, gpt-5.4, gpt-6-sol, then reruns.
+
 ## State (2026-10-30 17:40 UTC)
 - Branch `claude/kind-ritchie-xs4sfk`; no PR yet. Nothing is public. Quota used: about $6.7 of $100 (30-day window to 28 Nov).
 - Dataset (private): `brejeshbalakrishnan/agent-govbench-items`. Tasks (private, v1): `agent-govbench-guard-judge`,
