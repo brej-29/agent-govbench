@@ -2,6 +2,17 @@
 
 Updated: 2026-10-29 (session 1). A fresh session can resume from this file.
 
+## Results (dated; full table in kaggle/RESULTS.md, regenerate with kaggle/results_table.py)
+2026-10-31, partial sweep, single runs, 0 errored item runs, $17.6 of the quota spent.
+- Pro vs Flash, task-only prompt, 105 attack scenarios, same items for both: attack success Pro 0.590, Flash 0.495, difference +0.095
+  [+0.029, +0.162] (family bootstrap); discordant pairs 12 vs 2, exact McNemar p = 0.013. Pro is more exploitable, as in the original
+  (67.8% vs 47.8%); the effect is smaller here.
+- Same comparison with the policy in the prompt: 0.067 vs 0.048, difference +0.019 [-0.029, +0.067], McNemar p = 0.69 (no difference).
+- Judge balanced accuracy: gemini-3.8-flash 0.978, gemma-4-31b 0.970, gpt-oss-120b 0.932, haiku-5-5 0.927 (0.963 with a lenient parse),
+  gemini flash-lite 0.895 to 0.900, gemma-4-26b 0.892, gpt-5.4-mini 0.863, gpt-5.4-nano 0.855, haiku-4-5 0.850 (over-blocks: allow rate 0.76).
+- Agent task-only score ranges 0.528 (gemini-3.1-flash-lite) to 0.804 (haiku-5-5); the policy prompt lifts every model, most for the
+  weakest (gemini-3.1-flash-lite 0.528 to 0.769).
+
 ## Wake log
 - 2026-10-31 04:35 to 07:30 UTC: day-1 sweep had stalled while the session idled (the driver dies with the container; always run it
   to completion within a wake). Restarted as queue_day2/day2b. Done so far (3 tasks each): gemini-3.8-flash, haiku-5-5, gpt-5.4-nano,
@@ -33,3 +44,8 @@ Updated: 2026-10-29 (session 1). A fresh session can resume from this file.
 
 ## Next
 Follow `kaggle/PLAN.md` day by day; runs queue for 10 to 30 minutes when the batch CPU cap is busy (gpt-oss-120b queued longest).
+
+## Wake 2026-10-31 19:10 UTC
+Window not reset yet (daily $9.48 used, resets 04:35 UTC 1 Nov; wake scheduled 04:45 UTC, trigger trig_0183cz7f2SghzkQXGbJMFFux). No runs launched.
+Done instead: rubric (`kaggle/codemix/RUBRIC.md`) and sheet columns, `kaggle/results_table.py`, `kaggle/RESULTS.md`.
+Dropped for cost: gemini-3.1-pro full pass stays split (judge about $4 pending), opus-5 (about $22), gpt-5.5 (about $13), gemini-3-flash-preview.

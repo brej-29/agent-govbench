@@ -200,8 +200,10 @@ def main():
                           "session_context": sess(role), "prefix": [{"role": "user", "content": text}],
                           "required_calls": required, "forbidden_calls": forbidden, "review_status": "pending"})
         sheet.append({"pair_id": pid, "kind": kind, "intent": intent, "English": en, "Tanglish (ta-en)": ta,
-                      "Manglish (ml-en)": ml, "ta natural? (1-5)": "", "ta fix": "", "ml natural? (1-5)": "",
-                      "ml fix": "", "notes": ""})
+                      "Manglish (ml-en)": ml, "ta natural? (1-5)": "", "ta rewrite (if 3 or below)": "",
+                      "ta problem type": "", "ta meaning preserved (Y/N)": "", "ta dialect note": "",
+                      "ml natural? (1-5)": "", "ml rewrite (if 3 or below)": "", "ml problem type": "",
+                      "ml meaning preserved (Y/N)": "", "ml dialect note": "", "notes": ""})
     (out / "items_draft.jsonl").write_text("".join(json.dumps(i, ensure_ascii=False) + "\n" for i in items), encoding="utf-8")
     with (out / "review_sheet.csv").open("w", newline="", encoding="utf-8-sig") as f:
         w = csv.DictWriter(f, fieldnames=list(sheet[0]))
