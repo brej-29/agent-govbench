@@ -1,7 +1,5 @@
 # Results (generated)
 
-Generated 2026-10-31 19:15 UTC by kaggle/results_table.py from downloaded Kaggle run files. Status: partial sweep (11 models; gemini-3.1-pro has agent tasks only). Intervals resample scenario families (95%). Failures count as wrong; there were 0 errored item runs. Costs are Kaggle's own per-request figures. Scores are single runs: run-to-run variance is not yet measured (reruns planned). Items are synthetic, labels LLM-assisted; see STATUS.md and PLAN.md for limits.
-
 | Model | Task | n | Score [95% CI] | Resist / block | Complete / allow | Cost USD |
 |---|---|---|---|---|---|---|
 | claude-haiku-4-5-20251001 | agent-policy | 180 | 0.840 [0.784, 0.890] | 0.933 | 0.747 | 0.83 |
@@ -17,6 +15,7 @@ Generated 2026-10-31 19:15 UTC by kaggle/results_table.py from downloaded Kaggle
 | gpt-oss-120b | agent-policy | 180 | 0.823 [0.769, 0.876] | 0.819 | 0.827 | 0.06 |
 | claude-haiku-4-5-20251001 | agent-task-only | 180 | 0.714 [0.651, 0.774] | 0.629 | 0.800 | 0.81 |
 | claude-haiku-5-5 | agent-task-only | 180 | 0.804 [0.742, 0.862] | 0.781 | 0.827 | 0.08 |
+| claude-opus-5-5-default | agent-task-only | 180 | 0.775 [0.714, 0.838] | 0.790 | 0.760 | 2.42 |
 | gemini-3.1-flash-lite-preview | agent-task-only | 180 | 0.528 [0.470, 0.586] | 0.229 | 0.827 | 0.25 |
 | gemini-3.1-pro-preview | agent-task-only | 180 | 0.645 [0.584, 0.704] | 0.410 | 0.880 | 2.62 |
 | gemini-3.5-flash-lite | agent-task-only | 180 | 0.626 [0.566, 0.686] | 0.371 | 0.880 | 0.28 |
@@ -28,7 +27,9 @@ Generated 2026-10-31 19:15 UTC by kaggle/results_table.py from downloaded Kaggle
 | gpt-oss-120b | agent-task-only | 180 | 0.580 [0.517, 0.645] | 0.333 | 0.827 | 0.06 |
 | claude-haiku-4-5-20251001 | judge | 400 | 0.850 [0.813, 0.886] | 0.940 | 0.760 | 0.89 |
 | claude-haiku-5-5 | judge | 400 | 0.927 [0.901, 0.952] | 0.925 | 0.930 | 0.10 |
+| claude-opus-5-5-default | judge | 399 | 0.920 [0.885, 0.950] | 0.864 | 0.975 | 3.70 |
 | gemini-3.1-flash-lite-preview | judge | 400 | 0.895 [0.859, 0.930] | 0.845 | 0.945 | 0.21 |
+| gemini-3.1-pro-preview | judge | 297 | 0.980 [0.965, 0.994] | 0.993 | 0.967 | 3.79 |
 | gemini-3.5-flash-lite | judge | 400 | 0.900 [0.868, 0.931] | 0.845 | 0.955 | 0.26 |
 | gemini-3.8-flash | judge | 400 | 0.978 [0.960, 0.992] | 0.985 | 0.970 | 1.11 |
 | gemma-4-26b-a4b-it | judge | 400 | 0.892 [0.853, 0.926] | 0.815 | 0.970 | 0.13 |

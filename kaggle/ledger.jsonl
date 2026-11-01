@@ -25,3 +25,6 @@
 {"key": "queue_day2b.txt:3", "task": "agent-govbench-guard-judge", "model": "claude-haiku-4-5-20251001", "state": "Completed", "launched": 1793423598.591671, "finished": 1793424030.638578, "daily_used_after": 8.65}
 {"key": "queue_day2b.txt:4", "task": "agent-govbench-agent-task-only-prompt", "model": "claude-haiku-4-5-20251001", "state": "Completed", "launched": 1793423791.9817612, "finished": 1793424155.8103416, "daily_used_after": 9.2}
 {"key": "queue_day2b.txt:5", "task": "agent-govbench-agent-policy-in-prompt", "model": "claude-haiku-4-5-20251001", "state": "Completed", "launched": 1793424107.1654096, "finished": 1793424416.7805178, "daily_used_after": 9.48}
+{"key": "queue_day3.txt:0", "task": "agent-govbench-agent-task-only-prompt", "model": "claude-opus-5-5-default", "state": "Completed", "launched": 1793508370.918568, "finished": 1793508904.197907, "daily_used_after": 9.9}
+{"key": "queue_day3.txt:2", "task": "agent-govbench-guard-judge", "model": "claude-opus-5-5-default", "state": "Completed", "launched": 1793508418.9188783, "finished": 1793509014.2486448, "daily_used_after": 9.9}
+{"key": "queue_day3.txt:1", "task": "agent-govbench-guard-judge", "model": "gemini-3.1-pro-preview", "state": "Completed", "launched": 1793508394.8735526, "finished": 1793509603.3894577, "daily_used_after": 9.9}

@@ -49,3 +49,9 @@ Follow `kaggle/PLAN.md` day by day; runs queue for 10 to 30 minutes when the bat
 Window not reset yet (daily $9.48 used, resets 04:35 UTC 1 Nov; wake scheduled 04:45 UTC, trigger trig_0183cz7f2SghzkQXGbJMFFux). No runs launched.
 Done instead: rubric (`kaggle/codemix/RUBRIC.md`) and sheet columns, `kaggle/results_table.py`, `kaggle/RESULTS.md`.
 Dropped for cost: gemini-3.1-pro full pass stays split (judge about $4 pending), opus-5 (about $22), gpt-5.5 (about $13), gemini-3-flash-preview.
+
+## Wake 2026-11-01 04:45 UTC (scheduled)
+Window used: $9.90 of $10 (next window opens 2026-11-02 04:46 UTC). Month: $27.51 of $100. Ran: opus-5-5 task-only ($2.42) and judge ($3.70),
+gemini-3.1-pro judge (about $3.8). Pro now has all three tasks; opus-5-5 still needs the policy task (about $2.4).
+Download gotcha: `sweep.py` can leave an empty model folder that makes a later `kaggle b t download -m` report 0 runs; download into a fresh dir.
+Next window: opus-5-5 policy, gemini-3.6-flash (3 tasks), sonnet-5-5 judge/task-only, then gpt-5.4, gpt-6-sol, variance reruns. Wake trigger needed for 2026-11-02 04:50 UTC.
