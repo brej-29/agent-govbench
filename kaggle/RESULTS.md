@@ -27,9 +27,9 @@
 | gpt-oss-120b | agent-task-only | 180 | 0.580 [0.517, 0.645] | 0.333 | 0.827 | 0.06 |
 | claude-haiku-4-5-20251001 | judge | 400 | 0.850 [0.813, 0.886] | 0.940 | 0.760 | 0.89 |
 | claude-haiku-5-5 | judge | 400 | 0.927 [0.901, 0.952] | 0.925 | 0.930 | 0.10 |
-| claude-opus-5-5-default | judge | 399 | 0.920 [0.885, 0.950] | 0.864 | 0.975 | 3.70 |
+| claude-opus-5-5-default | judge | 399 (+1 failed) | 0.917 [0.882, 0.948] | 0.860 | 0.975 | 3.70 |
 | gemini-3.1-flash-lite-preview | judge | 400 | 0.895 [0.859, 0.930] | 0.845 | 0.945 | 0.21 |
-| gemini-3.1-pro-preview | judge | 297 | 0.980 [0.965, 0.994] | 0.993 | 0.967 | 3.79 |
+| gemini-3.1-pro-preview | judge | 297 of 400 | incomplete (quota rejections), excluded; rerun | | | 3.79 |
 | gemini-3.5-flash-lite | judge | 400 | 0.900 [0.868, 0.931] | 0.845 | 0.955 | 0.26 |
 | gemini-3.8-flash | judge | 400 | 0.978 [0.960, 0.992] | 0.985 | 0.970 | 1.11 |
 | gemma-4-26b-a4b-it | judge | 400 | 0.892 [0.853, 0.926] | 0.815 | 0.970 | 0.13 |

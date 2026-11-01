@@ -52,6 +52,7 @@ Dropped for cost: gemini-3.1-pro full pass stays split (judge about $4 pending),
 
 ## Wake 2026-11-01 04:45 UTC (scheduled)
 Window used: $9.90 of $10 (next window opens 2026-11-02 04:46 UTC). Month: $27.51 of $100. Ran: opus-5-5 task-only ($2.42) and judge ($3.70),
-gemini-3.1-pro judge (about $3.8). Pro now has all three tasks; opus-5-5 still needs the policy task (about $2.4).
+gemini-3.1-pro judge (about $3.8) which hit the daily quota mid-run: 103 of 400 items were rejected with 403 (quota reservation), so it is INCOMPLETE and excluded from RESULTS.md; rerun it first next window (about $3.8). Opus judge had 1 of 400 rejected (counted as a failure). opus-5-5 still needs the policy task (about $2.4).
 Download gotcha: `sweep.py` can leave an empty model folder that makes a later `kaggle b t download -m` report 0 runs; download into a fresh dir.
-Next window: opus-5-5 policy, gemini-3.6-flash (3 tasks), sonnet-5-5 judge/task-only, then gpt-5.4, gpt-6-sol, variance reruns. Wake trigger needed for 2026-11-02 04:50 UTC.
+Next window (opens 2026-11-02 04:46 UTC): gemini-3.1-pro judge rerun, opus-5-5 policy, gemini-3.6-flash (3 tasks), sonnet-5-5 judge/task-only, then gpt-5.4, gpt-6-sol, variance reruns. Wake trigger needed for 2026-11-02 04:50 UTC.
+Lesson: keep the cap at about $8.5 so in-flight runs do not hit the quota ceiling; a run that crosses it loses items.
