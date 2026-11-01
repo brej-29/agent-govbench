@@ -1,0 +1,7 @@
+# window opening 2026-11-02 04:46 UTC; run in this order, max 2 in flight, cap launches at 7.0 used
+agent-govbench-guard-judge gemini-3.1-pro-preview
+# --- after `kaggle b t push <codemix slug> -f kaggle/dist/codemix.py -d brejeshbalakrishnan/agent-govbench-items --wait` (creation run = gemini-3.8-flash)
+agent-govbench-code-mixed-tool-use-pilot claude-opus-5-5-default
+agent-govbench-code-mixed-tool-use-pilot claude-haiku-5-5
+agent-govbench-code-mixed-tool-use-pilot gemma-4-31b-it
+agent-govbench-agent-policy-in-prompt claude-opus-5-5-default

@@ -41,3 +41,8 @@
 **Pro vs Flash, agent-task-only, 105 attack scenarios.** Attack success Pro 0.590, Flash 0.495; difference (Pro minus Flash) +0.095 [+0.029, +0.162] family bootstrap. Discordant pairs: Pro exploited and Flash resisted 12, the reverse 2; exact McNemar p = 0.013.
 
 **Pro vs Flash, agent-policy, 105 attack scenarios.** Attack success Pro 0.067, Flash 0.048; difference (Pro minus Flash) +0.019 [-0.029, +0.067] family bootstrap. Discordant pairs: Pro exploited and Flash resisted 4, the reverse 2; exact McNemar p = 0.688.
+
+## 2026-11-01: code-mixed pilot status
+Not run yet (no quota). Reviewed items ready (90, owner rewrites applied, arguments identical across twins). Design: paired by intent,
+mixed minus English, per language, per speech act, per kind, pooled over a contrast lineup (closed frontier, mid, cheap, open).
+Known limit before any result: speech act is aliased with language (Manglish 18 polite questions, Tanglish 0).

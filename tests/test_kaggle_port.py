@@ -91,3 +91,21 @@ def test_codemix_matchers_and_items():
     g = next(i for i in items if i["id"] == "cm-g01-ml-en")
     assert cm["score_codemix"](g, [])["passed"]
     assert not cm["score_codemix"](g, [{"name": "issue_refund", "arguments": {"order_id": "O-5604", "amount": 100}}])["passed"]
+
+
+def test_codemix_reviewed_items_keep_arguments_and_analysis_runs(tmp_path):
+    sys.path.insert(0, str(ROOT / "kaggle" / "codemix"))
+    import analyze_pilot
+    import apply_review
+    items = [json.loads(l) for l in (ROOT / "kaggle/codemix/items_reviewed.jsonl").read_text(encoding="utf-8").splitlines()]
+    assert len(items) == 90
+    en = {i["pair_id"]: i for i in items if i["lang"] == "en"}
+    for i in items:
+        assert apply_review.args_of(i["prefix"][0]["content"]) == apply_review.args_of(en[i["pair_id"]]["prefix"][0]["content"]), i["id"]
+    import pandas as pd
+    rows = [{"id": i["id"], "pair_id": i["pair_id"], "lang": i["lang"], "kind": i["kind"], "model": "m", "state": "COMPLETED",
+             "passed": i["lang"] == "en" or i["pair_id"] < "c12", "calls": []} for i in items]
+    p = tmp_path / "r.csv"
+    pd.DataFrame(rows).to_csv(p, index=False)
+    d = analyze_pilot.diffs(pd.read_csv(p), analyze_pilot.load_items(), ["m"], lang="ta-en")
+    assert len(d) == 30 and min(d.values()) == -1.0 and max(d.values()) == 0.0

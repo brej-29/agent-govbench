@@ -44,7 +44,7 @@ def item_rows(root: Path) -> list[dict]:
     rows = []
     for f in root.rglob("*.run.json"):
         parts = f.relative_to(root).parts
-        if len(parts) < 5 or not re.match(r"govbench_(guard|agent)_item", f.name):
+        if len(parts) < 5 or not re.match(r"govbench_(guard|agent|codemix)_item", f.name):
             continue
         task, version, model, run_id = parts[0], parts[1], parts[2], parts[3]
         try:

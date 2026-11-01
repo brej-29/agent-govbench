@@ -56,3 +56,16 @@ gemini-3.1-pro judge (about $3.8) which hit the daily quota mid-run: 103 of 400 
 Download gotcha: `sweep.py` can leave an empty model folder that makes a later `kaggle b t download -m` report 0 runs; download into a fresh dir.
 Next window (opens 2026-11-02 04:46 UTC): gemini-3.1-pro judge rerun, opus-5-5 policy, gemini-3.6-flash (3 tasks), sonnet-5-5 judge/task-only, then gpt-5.4, gpt-6-sol, variance reruns. Wake trigger needed for 2026-11-02 04:50 UTC.
 Lesson: keep the cap at about $8.5 so in-flight runs do not hit the quota ceiling; a run that crosses it loses items.
+
+## 2026-11-01 (after the owner's sheet review; no quota available, nothing run)
+- Applied the review (`kaggle/codemix/apply_review.py`): 90 of 90 items kept, 17 owner rewrites used (c06, c10, c17, c19 included),
+  argument identity verified (no drift, `kaggle/codemix/ARG_CHECK.md`), speech acts labelled (`speech_acts.csv`).
+- Speech-act confound: Manglish has 18 polite-question lines, Tanglish 0, so a Tamil vs Malayalam difference cannot be separated from request form.
+- Review provenance line was left as an unfilled template in the owner's message: NOT recorded, needs the owner's statement (see codemix/README.md).
+- Dataset `agent-govbench-items` has a new version with `codemix_items.jsonl` (private). Codemix task not pushed yet: pushing runs it once
+  on gemini-3.8-flash and quota is spent.
+- Wake scheduled 2026-11-02 04:50 UTC (trigger trig_01Rhex1k8cbdDwqxcie1JkU3). Plan: `kaggle/queue_day4.txt`.
+- Cost estimates for that window: gemini-3.1-pro judge rerun about $3.8; pilot (90 items each, policy prompt): opus-5-5 about $1.3,
+  gemini-3.8-flash creation run about $0.6, haiku-5-5 about $0.04, gemma-4-31b about $0.09 (total about $2.1); opus-5-5 policy about $2.4 if room.
+  Launch cap 7.0 used so in-flight runs cannot cross $10.
+- Pilot analysis: `kaggle/codemix/analyze_pilot.py` (paired by intent; splits by language, speech act, kind; pooled over models).

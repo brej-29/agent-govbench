@@ -1,7 +1,34 @@
 # Code-mixed tool-use items (Tanglish and Manglish pilot)
 
-Status: DRAFT. 30 intents x 3 languages = 90 items (`items_draft.jsonl`). The owner reviews `review_sheet.csv` for
-naturalness; nothing is run or published before that. All items are `review_status: pending`.
+Status: REVIEWED by the owner (2026-11-01); not yet run. 30 intents x 3 languages = 90 items. Files: `items_draft.jsonl` (Claude's
+drafts), `review_sheet_reviewed.csv` (the owner's sheet exactly as returned), `items_reviewed.jsonl` (drafts with the owner's
+rewrites applied; this is what the task uses, copied to `kaggle/data/codemix_items.jsonl`), `ARG_CHECK.md`, `speech_acts.csv`.
+
+**Review provenance: NOT RECORDED YET.** The owner's message left the provenance line as an unfilled template
+("all scores, rewrites and notes are my own" OR "drafted with AI help, every row checked and approved by me"). The session
+did not choose one for them. Fill in one of the two statements here before anything is published:
+`PROVENANCE: ________`
+
+How the review was applied (`apply_review.py`): the owner's rewrite is used wherever one is given (17 lines, including c06,
+c10, c17, c19 which were marked meaning-not-preserved on the draft but come with a rewrite restoring the exact quoted text);
+otherwise the draft line is kept (approved). A row would be dropped only if marked N with no rewrite: none were. The owner's
+rows were not edited. All 90 items kept.
+
+**Argument identity** (`ARG_CHECK.md`): after the rewrites, order and employee ids, emails, paths, quoted text, numbers,
+names and dates extracted from each code-mixed line are identical to its English twin (no drift). The detector does flag the
+original c06 draft (quoted note translated), so it can see this kind of drift. It is pattern-based: it does not check
+that unquoted words such as verbs are the same, which is by design.
+
+**Pragmatic force confound.** `speech_act` labels each line `command`, `request_question` (polite "can you", Malayalam
+-amo/-oo) or `info_question`. Counts: English 26 command / 4 info_question; Tanglish 27 command / 3 info_question / 0
+request_question; Manglish 9 command / 3 info_question / 18 request_question. So 18 Manglish lines turn an English command into
+a polite question and no Tanglish line does. A Tamil versus Malayalam difference therefore cannot be separated from
+speech-act difference in this set: language and request form are almost perfectly aliased. The only handle is within
+Malayalam (9 command lines vs 18 request-question lines) and a Tanglish-vs-Manglish comparison restricted to command lines
+(27 vs 9), both small. The analysis reports pooled results and splits by speech act and does not claim a language effect
+where the split removes it. The owner's rows were left as they are; a clean fix is a second Manglish version with all
+commands (cheapest extension below).
+
 
 ## Item format v1 (also the plug-in point for any later language set)
 
@@ -29,7 +56,7 @@ so the English minus code-mixed pass rate, paired per intent, isolates the effec
   tests language understanding of intent and number words less than a fully natural set would.
 - The agent runs with the full policy in the system prompt (the deployed setting); governance items test that policy
   application survives code-mixing.
-- Drafts were written by Claude, not by native speakers. Dialect, register and spelling conventions vary; the review
+- Drafts were written by Claude, not by native speakers; the owner reviewed and rewrote them (provenance line above). Dialect, register and spelling conventions vary; the review
   sheet asks for a 1 to 5 naturalness score and a corrected text per language.
 - Pilot size (30 intents) gives wide intervals; read per-language gaps as indicative, with the paired design as the main control.
 
