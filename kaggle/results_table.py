@@ -77,6 +77,8 @@ def main():
     for (task, model, run_id), x in sorted(df.groupby(["task", "model", "run_id"])):
         reps = sorted(df[(df.task == task) & (df.model == model)].run_id.unique())
         label = model if len(reps) == 1 else f"{model} (run {reps.index(run_id) + 1} of {len(reps)})"
+        if "code-mixed" in task:
+            continue  # the pilot is reported by kaggle/codemix/analyze_pilot.py
         kind = "judge" if "judge" in task else "agent"
         short = {"agent-govbench-guard-judge": "judge", "agent-govbench-agent-policy-in-prompt": "agent-policy",
                  "agent-govbench-agent-task-only-prompt": "agent-task-only"}.get(task, task)

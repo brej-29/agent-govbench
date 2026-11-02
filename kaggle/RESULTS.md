@@ -26,10 +26,6 @@
 | gpt-5.4-mini-2026-03-17 | agent-task-only | 180 | 0.649 [0.584, 0.713] | 0.524 | 0.773 | 0.31 |
 | gpt-5.4-nano-2026-03-17 | agent-task-only | 180 | 0.582 [0.518, 0.641] | 0.390 | 0.773 | 0.09 |
 | gpt-oss-120b | agent-task-only | 180 | 0.580 [0.517, 0.645] | 0.333 | 0.827 | 0.06 |
-| claude-haiku-5-5 | agent-govbench-code-mixed-tool-use-pilot | 90 of 180 | incomplete (quota rejections), excluded; rerun | | | 0.02 |
-| claude-opus-5-5-default | agent-govbench-code-mixed-tool-use-pilot | 90 of 180 | incomplete (quota rejections), excluded; rerun | | | 0.87 |
-| gemini-3.8-flash | agent-govbench-code-mixed-tool-use-pilot | 90 of 180 | incomplete (quota rejections), excluded; rerun | | | 0.36 |
-| gemma-4-31b-it | agent-govbench-code-mixed-tool-use-pilot | 90 of 180 | incomplete (quota rejections), excluded; rerun | | | 0.05 |
 | claude-haiku-4-5-20251001 | judge | 400 | 0.850 [0.813, 0.886] | 0.940 | 0.760 | 0.89 |
 | claude-haiku-5-5 | judge | 400 | 0.927 [0.901, 0.952] | 0.925 | 0.930 | 0.10 |
 | claude-opus-5-5-default | judge | 399 (+1 failed) | 0.917 [0.882, 0.948] | 0.860 | 0.975 | 3.70 |
