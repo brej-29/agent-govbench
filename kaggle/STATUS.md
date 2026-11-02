@@ -61,7 +61,7 @@ Lesson: keep the cap at about $8.5 so in-flight runs do not hit the quota ceilin
 - Applied the review (`kaggle/codemix/apply_review.py`): 90 of 90 items kept, 17 owner rewrites used (c06, c10, c17, c19 included),
   argument identity verified (no drift, `kaggle/codemix/ARG_CHECK.md`), speech acts labelled (`speech_acts.csv`).
 - Speech-act confound: Manglish has 18 polite-question lines, Tanglish 0, so a Tamil vs Malayalam difference cannot be separated from request form.
-- Review provenance line was left as an unfilled template in the owner's message: NOT recorded, needs the owner's statement (see codemix/README.md).
+- Review provenance recorded 2026-11-02 (owner: scores and rewrites own; notes AI-drafted, every row checked and approved), in codemix/README.md, RESULTS.md, analyze_pilot.py output and GRANT_DRAFT.md.
 - Dataset `agent-govbench-items` has a new version with `codemix_items.jsonl` (private). Codemix task not pushed yet: pushing runs it once
   on gemini-3.8-flash and quota is spent.
 - Wake scheduled 2026-11-02 04:50 UTC (trigger trig_01Rhex1k8cbdDwqxcie1JkU3). Plan: `kaggle/queue_day4.txt`.
@@ -69,3 +69,7 @@ Lesson: keep the cap at about $8.5 so in-flight runs do not hit the quota ceilin
   gemini-3.8-flash creation run about $0.6, haiku-5-5 about $0.04, gemma-4-31b about $0.09 (total about $2.1); opus-5-5 policy about $2.4 if room.
   Launch cap 7.0 used so in-flight runs cannot cross $10.
 - Pilot analysis: `kaggle/codemix/analyze_pilot.py` (paired by intent; splits by language, speech act, kind; pooled over models).
+
+## Wakes scheduled (set 2026-11-02 03:42 UTC)
+2026-11-02 04:50 (trig_01Rhex1k8cbdDwqxcie1JkU3), 2026-11-03 04:50 (trig_01QJQTbJNCt7GtnHKogF9Jy4), 2026-11-04 04:50 (trig_01WUxZUvxfmaYs6vdwEmmxTF),
+2026-11-05 04:50 (trig_013jq55XLuM92T26sFgSiUpj, final; credits end 2026-11-05 07:59 UTC). Queues: queue_day4..day7 per PLAN.md.

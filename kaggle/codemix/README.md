@@ -4,11 +4,9 @@ Status: REVIEWED by the owner (2026-11-01); not yet run. 30 intents x 3 language
 drafts), `review_sheet_reviewed.csv` (the owner's sheet exactly as returned), `items_reviewed.jsonl` (drafts with the owner's
 rewrites applied; this is what the task uses, copied to `kaggle/data/codemix_items.jsonl`), `ARG_CHECK.md`, `speech_acts.csv`.
 
-**Review provenance: STILL NOT RECORDED.** Both messages from the owner contained the provenance line as an unfilled template
-("CHOOSE ONE AND DELETE THE OTHER": "All scores, rewrites and notes are my own." / "Drafted with AI help, every row checked and approved by me.").
-The session cannot choose between these for the owner. Until it is filled in, this line is carried into the pilot documentation and
-every results table as `PROVENANCE: pending (owner to state)`. Replace it with the chosen sentence:
-`PROVENANCE: ________`
+**Review provenance (stated by the owner, 2026-11-02):** "All scores, rewrites are my own. Notes drafted with AI help, every row checked and approved by me." Keep this line wherever the pilot, its results tables or the write-up are published.
+`PROVENANCE: scores and rewrites by the owner; notes AI-drafted, every row checked and approved by the owner.`
+(The initial item drafts, before review, were written by Claude.)
 
 How the review was applied (`apply_review.py`): the owner's rewrite is used wherever one is given (17 lines, including c06,
 c10, c17, c19 which were marked meaning-not-preserved on the draft but come with a rewrite restoring the exact quoted text);

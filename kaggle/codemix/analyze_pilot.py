@@ -63,7 +63,7 @@ def main():
     df["passed"] = df.passed.astype(bool)
     items = load_items()
     models = sorted(df.model.unique())
-    L = []
+    L = ["Review provenance: scores and rewrites by the owner; review notes AI-drafted, every row checked and approved by the owner. Initial item drafts written by Claude.", ""]
     L.append("| Model | English | Tanglish | Manglish | Tanglish minus English | Manglish minus English |")
     L.append("|---|---|---|---|---|---|")
     for m in models:

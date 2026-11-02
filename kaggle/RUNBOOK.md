@@ -45,4 +45,4 @@ about $45 of headroom after the scheduled windows.
 3. Publish the three tasks (and the pilot if you want it): `kaggle b t publish <slug>` or the task page's Make public. Publishing also publishes the backing notebook unless you pass `--no-publish-backing-notebook`.
 4. Create the benchmark and add the tasks: see `UI_STEPS.md`.
 5. Review the benchmark page text and the grant draft (`GRANT_DRAFT.md`), then submit the grant form yourself.
-6. Fill in the pilot's review provenance line (`kaggle/codemix/README.md`) before publishing the pilot.
+6. Review provenance is recorded (owner's statement of 2026-11-02, in `kaggle/codemix/README.md`): keep that line wherever the pilot is published.

@@ -4,7 +4,7 @@ Status: everything is private (dataset, tasks, notebooks). The CLI cannot create
 Menu names below come from Kaggle's announcement and docs and may differ slightly; check each screen, and tell the session if one is different.
 
 ## 0. Before anything public
-- [ ] Fill in the review provenance line (`kaggle/codemix/README.md`) if the pilot is included.
+- [x] Review provenance recorded in `kaggle/codemix/README.md` (keep the line when publishing the pilot).
 - [ ] Read the dataset description and task descriptions (255 characters each) once more; confirm you are happy for the data to be CC BY 4.0 and public.
 - [ ] Decide whether the pilot task is part of the first benchmark (recommended: leave it out until its results are written up; add later as a fourth task).
 - [ ] Confirm all intended model runs are finished (`kaggle b t status <slug>`); the leaderboard shows what has been run when you publish.

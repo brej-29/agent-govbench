@@ -45,4 +45,4 @@ replace live fixtures; temperature is not controllable through the proxy, so res
 
 ## About the applicant
 [Owner to write: background, affiliation, links (GitHub brej-29/agent-govbench, Hugging Face BrejBala/agent-govbench).]
-Review provenance of the code-mixed items: pending (owner to state).
+Review provenance of the code-mixed items (owner's statement): "All scores, rewrites are my own. Notes drafted with AI help, every row checked and approved by me." Initial item drafts were written by Claude.

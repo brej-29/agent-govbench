@@ -33,7 +33,7 @@ Order (use each daily window fully): day 1 validation and cheap models; day 2 ge
 gpt-6-sol, gemini-3.6-flash; day 4 remaining mid models and reruns; day 5 code-mixed pilot and leftovers.
 
 ## Remaining schedule (set 2026-11-02; credits expire 2026-11-05 13:29 IST = 07:59 UTC)
-Wakes (UTC): 11-02 04:50 (trigger from earlier), 11-03 04:50, 11-04 04:50, 11-05 04:50 (final, must end before 07:30). Quota already
+Wakes (UTC), all scheduled with the session's own timer: 11-02 04:50 (trig_01Rhex1k8cbdDwqxcie1JkU3), 11-03 04:50 (trig_01QJQTbJNCt7GtnHKogF9Jy4), 11-04 04:50 (trig_01WUxZUvxfmaYs6vdwEmmxTF), 11-05 04:50 (trig_013jq55XLuM92T26sFgSiUpj, final, must end before 07:30). Quota already
 used this month: $27.6 of $100. Each window keeps launches below $7 "used" so in-flight runs cannot cross $10 (a run that crosses
 loses items: the first gemini-3.1-pro judge run lost 103 of 400).
 
