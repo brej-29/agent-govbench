@@ -28,3 +28,7 @@
 {"key": "queue_day3.txt:0", "task": "agent-govbench-agent-task-only-prompt", "model": "claude-opus-5-5-default", "state": "Completed", "launched": 1793508370.918568, "finished": 1793508904.197907, "daily_used_after": 9.9}
 {"key": "queue_day3.txt:2", "task": "agent-govbench-guard-judge", "model": "claude-opus-5-5-default", "state": "Completed", "launched": 1793508418.9188783, "finished": 1793509014.2486448, "daily_used_after": 9.9}
 {"key": "queue_day3.txt:1", "task": "agent-govbench-guard-judge", "model": "gemini-3.1-pro-preview", "state": "Completed", "launched": 1793508394.8735526, "finished": 1793509603.3894577, "daily_used_after": 9.9}
+{"key": "q_b.txt:0", "task": "agent-govbench-code-mixed-tool-use-pilot", "model": "claude-opus-5-5-default", "state": "Completed", "launched": 1793595801.8087277, "finished": 1793596080.5672922, "daily_used_after": 6.35}
+{"key": "q_b.txt:1", "task": "agent-govbench-code-mixed-tool-use-pilot", "model": "claude-haiku-5-5", "state": "Completed", "launched": 1793596113.92585, "finished": 1793596346.1527965, "daily_used_after": 6.38}
+{"key": "q_b.txt:2", "task": "agent-govbench-code-mixed-tool-use-pilot", "model": "gemma-4-31b-it", "state": "Completed", "launched": 1793596378.7939835, "finished": 1793596749.8227916, "daily_used_after": 6.43}
+{"key": "q_c.txt:0", "task": "agent-govbench-agent-policy-in-prompt", "model": "claude-opus-5-5-default", "state": "Completed", "launched": 1793598276.7446213, "finished": 1793598740.4818935, "daily_used_after": 8.97}

@@ -73,3 +73,11 @@ Lesson: keep the cap at about $8.5 so in-flight runs do not hit the quota ceilin
 ## Wakes scheduled (set 2026-11-02 03:42 UTC)
 2026-11-02 04:50 (trig_01Rhex1k8cbdDwqxcie1JkU3), 2026-11-03 04:50 (trig_01QJQTbJNCt7GtnHKogF9Jy4), 2026-11-04 04:50 (trig_01WUxZUvxfmaYs6vdwEmmxTF),
 2026-11-05 04:50 (trig_013jq55XLuM92T26sFgSiUpj, final; credits end 2026-11-05 07:59 UTC). Queues: queue_day4..day7 per PLAN.md.
+
+## Wake 2026-11-02 04:50 UTC (done 06:10)
+Window used $8.97 of $10 (next window opens 2026-11-03 04:52 UTC); month $36.4 of $100. Done: gemini-3.1-pro judge rerun (complete, 400 of 400, $4.76,
+balanced accuracy 0.9725); codemix pilot pushed (private) and run on opus-5-5, haiku-5-5, gemma-4-31b + gemini-3.8-flash creation run; opus-5-5 policy task.
+Findings: pilot is at ceiling (see RESULTS.md); intent c18 check was invalid and was fixed (dataset v4, rescored offline).
+Tooling fixes: pilot task description over 255 chars (shortened); sweep.py now detects reruns by the run's Ended time (the status table keeps only the
+latest run per model); kill stray drivers with `pkill -f "[s]weep.py --queue"` (a plain pattern also kills the calling shell).
+Next: queue_day5.txt (sonnet-5-5), per PLAN.md.

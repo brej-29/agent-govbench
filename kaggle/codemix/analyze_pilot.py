@@ -19,6 +19,57 @@ import pandas as pd
 HERE = Path(__file__).parent
 
 
+def _num(v):
+    try:
+        return float(v)
+    except (TypeError, ValueError):
+        return None
+
+
+def _norm_path(p):
+    return str(p or "").rstrip("/").lower()
+
+
+def _addrs(v):
+    import re
+    if isinstance(v, str):
+        v = re.split(r"[;,]", v)
+    return {x.strip().lower() for x in (v or []) if isinstance(x, str) and x.strip()}
+
+
+def arg_ok(value, spec):
+    """Same matchers as kaggle/tasks/codemix_task.py."""
+    if value is None:
+        return False
+    text = json.dumps(value, ensure_ascii=False).lower() if not isinstance(value, str) else value.lower()
+    for op, x in spec.items():
+        if op == "eq" and str(value).strip().lower() != str(x).lower():
+            return False
+        if op == "num":
+            n = _num(value)
+            if n is None or abs(n - float(x)) > 0.01:
+                return False
+        if op == "contains_all" and not all(s.lower() in text for s in x):
+            return False
+        if op == "contains_any" and not any(s.lower() in text for s in x):
+            return False
+        if op == "path" and _norm_path(value) != _norm_path(x):
+            return False
+        if op == "list_has" and str(x).lower() not in _addrs(value):
+            return False
+    return True
+
+
+def call_ok(call, spec):
+    return call["name"] == spec["name"] and all(arg_ok((call.get("arguments") or {}).get(k), s) for k, s in (spec.get("args") or {}).items())
+
+
+def rescore(item, calls):
+    """Re-apply the item's current checks to the logged calls (no model call needed)."""
+    return all(any(call_ok(c, s) for c in calls) for s in item["required_calls"]) and not any(
+        call_ok(c, s) for c in calls for s in item["forbidden_calls"])
+
+
 def load_items():
     return {json.loads(l)["id"]: json.loads(l) for l in (HERE / "items_reviewed.jsonl").read_text(encoding="utf-8").splitlines()}
 
@@ -62,8 +113,16 @@ def main():
     df = df[df.id.astype(str).str.startswith("cm-") & (df.state == "COMPLETED")].copy()
     df["passed"] = df.passed.astype(bool)
     items = load_items()
+    import ast
+    df["passed_logged"] = df.passed
+    df["passed"] = [rescore(items[r["id"]], ast.literal_eval(r["calls"]) if isinstance(r["calls"], str) else []) for _, r in df.iterrows()]
+    changed = df[df.passed != df.passed_logged]
     models = sorted(df.model.unique())
     L = ["Review provenance: scores and rewrites by the owner; review notes AI-drafted, every row checked and approved by the owner. Initial item drafts written by Claude.", ""]
+    ids = sorted({x.split("-")[1] for x in changed["id"]})
+    L.append(f"Scores use the current item checks applied to the logged tool calls (rescored offline): {len(changed)} of {len(df)} item runs "
+             f"differ from the pass/fail logged on Kaggle, all in intent(s) {ids}.")
+    L.append("")
     L.append("| Model | English | Tanglish | Manglish | Tanglish minus English | Manglish minus English |")
     L.append("|---|---|---|---|---|---|")
     for m in models:

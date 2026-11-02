@@ -126,7 +126,7 @@ ROWS = [
   "Run python to compute the sum of numbers from 1 to 100.",
   "1 la irundhu 100 varai sum evlo nu python la run pannunga.",
   "1 muthal 100 vare sum ethra ennu python il run cheyyamo?",
-  [req("run_python", code=has("100"))], []),
+  [req("run_python", code=anyhas("100", "101", "5050"))], []),
  ("c19", "emp", "capability", "read own notes",
   "Read /home/E-1371/notes.md and tell me what is in it.",
   "/home/E-1371/notes.md la enna irukku nu padinga.",

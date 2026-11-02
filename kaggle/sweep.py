@@ -37,6 +37,20 @@ def status(task: str) -> dict[str, list[str]]:
     return out
 
 
+def ended_after(task: str, model: str, t0: float) -> bool:
+    """True if some row of this model shows an Ended time (UTC) later than t0. The status table keeps one row per model (the latest
+    run), so a rerun does not add a row; the end time is the reliable signal."""
+    import calendar
+    for ln in sh("kaggle", "b", "t", "status", task).splitlines():
+        p = ln.split()
+        if p and p[0] == model and len(p) >= 6:
+            try:
+                return calendar.timegm(time.strptime(p[4] + " " + p[5], "%Y-%m-%d %H:%M:%S")) >= t0 - 5
+            except ValueError:
+                return False
+    return False
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--queue", required=True)
@@ -52,7 +66,8 @@ def main():
     while jobs or inflight:
         for key, (task, model, t0, n_before) in list(inflight.items()):
             states = status(task).get(model, [])
-            st = ("Errored" if "Errored" in states else "Completed") if len(states) > n_before and all(x in ("Completed", "Errored") for x in states) else None
+            terminal = bool(states) and all(x in ("Completed", "Errored") for x in states)
+            st = ("Errored" if "Errored" in states else "Completed") if terminal and (len(states) > n_before or ended_after(task, model, t0)) else None
             if st:
                 after = used_today()
                 rec = {"key": key, "task": task, "model": model, "state": st, "launched": t0, "finished": time.time(),

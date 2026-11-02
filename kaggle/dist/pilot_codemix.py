@@ -440,9 +440,8 @@ def codemix_item(llm, item_json: str) -> bool:
 
 
 @kbench.task(name="GovBench Pilot codemix", description=(
-    "Does an agent pick the right tool and arguments when the same request is written in English, Tanglish "
-    "(Tamil-English) or Manglish (Malayalam-English)? 30 matched triples, policy in prompt. Score = mean pass rate "
-    "over the two code-mixed languages; the summary reports the gap to English."))
+    "Does an agent pick the right tool and arguments when the same request is in English, Tanglish or Manglish? "
+    "30 matched triples, policy in prompt. Score = pass rate on the two code-mixed languages; summary reports the gap."))
 def codemix_task(llm) -> float:
     items = load_items("codemix_items.jsonl")
     df = pd.DataFrame({"item_json": [json.dumps(i, ensure_ascii=False) for i in items]})
