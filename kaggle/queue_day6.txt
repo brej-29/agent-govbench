@@ -1,0 +1,9 @@
+# window 2026-11-04 04:46 UTC (wake 04:50). Estimated total about 8.0; launch cap 7.0 used
+agent-govbench-guard-judge gemini-3.6-flash
+agent-govbench-agent-task-only-prompt gemini-3.6-flash
+agent-govbench-agent-policy-in-prompt gemini-3.6-flash
+agent-govbench-guard-judge gpt-5.4-2026-03-05
+# variance reruns (second run of an already-run task on the same model), judge
+agent-govbench-guard-judge claude-haiku-5-5
+agent-govbench-guard-judge gpt-oss-120b
+agent-govbench-guard-judge gemma-4-31b-it

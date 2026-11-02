@@ -73,7 +73,10 @@ def main():
     fm = fam_map()
     lines = ["| Model | Task | n | Score [95% CI] | Resist / block | Complete / allow | Cost USD |", "|---|---|---|---|---|---|---|"]
     per = {}
-    for (task, model), x in sorted(df.groupby(["task", "model"])):
+    nreps = df.groupby(["task", "model"]).run_id.nunique()
+    for (task, model, run_id), x in sorted(df.groupby(["task", "model", "run_id"])):
+        reps = sorted(df[(df.task == task) & (df.model == model)].run_id.unique())
+        label = model if len(reps) == 1 else f"{model} (run {reps.index(run_id) + 1} of {len(reps)})"
         kind = "judge" if "judge" in task else "agent"
         short = {"agent-govbench-guard-judge": "judge", "agent-govbench-agent-policy-in-prompt": "agent-policy",
                  "agent-govbench-agent-task-only-prompt": "agent-task-only"}.get(task, task)
@@ -81,7 +84,7 @@ def main():
         x = x[x.state == "COMPLETED"].sort_values("run_id").drop_duplicates("id")
         need = 400 if kind == "judge" else 180
         if len(x) < need * 0.95:  # quota rejections or errors: the run is incomplete, do not score it as if it were whole
-            lines.append(f"| {model} | {short} | {len(x)} of {need} | incomplete (quota rejections), excluded; rerun | | | {x.cost_usd.sum():.2f} |")
+            lines.append(f"| {label} | {short} | {len(x)} of {need} | incomplete (quota rejections), excluded; rerun | | | {x.cost_usd.sum():.2f} |")
             continue
         rows = [(item_flag(r, kind), bool(r.passed)) for _, r in x.iterrows()]
         byf = defaultdict(list)
@@ -98,8 +101,8 @@ def main():
         lo, hi = boot(byf, kind)
         g1 = sum(p for g, p in rows if g) / max(1, sum(1 for g, _ in rows if g))
         g0 = sum(p for g, p in rows if not g) / max(1, sum(1 for g, _ in rows if not g))
-        lines.append(f"| {model} | {short} | {len(x)}{" (+%d failed)" % (need - len(x)) if len(x) < need else ""} | {s:.3f} [{lo:.3f}, {hi:.3f}] | {g1:.3f} | {g0:.3f} | {x.cost_usd.sum():.2f} |")
-        per[(short, model)] = x.set_index("id").passed.astype(bool)
+        lines.append(f"| {label} | {short} | {len(x)}{" (+%d failed)" % (need - len(x)) if len(x) < need else ""} | {s:.3f} [{lo:.3f}, {hi:.3f}] | {g1:.3f} | {g0:.3f} | {x.cost_usd.sum():.2f} |")
+        per.setdefault((short, model), x.set_index("id").passed.astype(bool))  # first run is used for paired tests
     out = ["\n".join(lines)]
     # paired Pro vs Flash on identical scenarios
     for short in ("agent-task-only", "agent-policy"):

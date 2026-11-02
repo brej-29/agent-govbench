@@ -2,7 +2,8 @@
 
   python kaggle/sweep.py --queue kaggle/queue_day1.txt --max-inflight 2 --daily-cap 8.0
 
-Queue line: <task-slug> <model-slug> [note]. Lines already marked done in the ledger (same line index key) are skipped.
+Queue line: <task-slug> <model-slug> [note]; '#' lines are comments. Lines already in the ledger (queue file name + line index) are skipped, so a rerun of the same model
+needs its own line in a NEW queue file. Reruns create extra rows for the model in `kaggle b t status`; the driver waits for the new row.
 Stops launching when the rolling-24h spend reaches --daily-cap. Safe to re-run.
 """
 from __future__ import annotations
@@ -26,12 +27,13 @@ def used_today() -> float:
     return float(m.group(1)) if m else 999.0
 
 
-def status(task: str) -> dict[str, str]:
-    out = {}
+def status(task: str) -> dict[str, list[str]]:
+    """model -> list of run states (several rows per model once a task has been rerun on it)."""
+    out: dict[str, list[str]] = {}
     for ln in sh("kaggle", "b", "t", "status", task).splitlines():
         p = ln.split()
         if len(p) >= 2 and p[1] in ("Completed", "Running", "Queued", "Errored", "Scheduled"):
-            out[p[0]] = p[1]
+            out.setdefault(p[0], []).append(p[1])
     return out
 
 
@@ -48,15 +50,22 @@ def main():
     jobs = [j for j in jobs if f"{Path(a.queue).name}:{j[0]}" not in done]
     inflight: dict[str, tuple] = {}
     while jobs or inflight:
-        for key, (task, model, t0, before) in list(inflight.items()):
-            st = status(task).get(model)
-            if st in ("Completed", "Errored"):
+        for key, (task, model, t0, n_before) in list(inflight.items()):
+            states = status(task).get(model, [])
+            st = ("Errored" if "Errored" in states else "Completed") if len(states) > n_before and all(x in ("Completed", "Errored") for x in states) else None
+            if st:
                 after = used_today()
                 rec = {"key": key, "task": task, "model": model, "state": st, "launched": t0, "finished": time.time(),
                        "daily_used_after": after}
                 with LEDGER.open("a") as f:
                     f.write(json.dumps(rec) + "\n")
-                sh("kaggle", "b", "t", "download", task, "-o", a.dl, "-m", model)
+                # download into a fresh folder, then merge: an existing empty model folder makes the CLI report 0 runs
+                import shutil
+                import tempfile
+                tmp = tempfile.mkdtemp(prefix="dl_")
+                sh("kaggle", "b", "t", "download", task, "-o", tmp, "-m", model)
+                shutil.copytree(tmp, a.dl, dirs_exist_ok=True)
+                shutil.rmtree(tmp, ignore_errors=True)
                 print("finished", key, task, model, st, "daily used", after, flush=True)
                 del inflight[key]
         while jobs and len(inflight) < a.max_inflight:
@@ -66,12 +75,13 @@ def main():
                 break
             i, task, model, note = jobs.pop(0)
             key = f"{Path(a.queue).name}:{i}"
+            n_before = len(status(task).get(model, []))
             r = subprocess.run(["kaggle", "b", "t", "run", task, "-m", model], capture_output=True, text=True)
             if "Scheduled" not in r.stdout:
                 print("launch failed", key, r.stdout[-300:], r.stderr[-300:], flush=True)
                 continue
             time.sleep(20)  # let the run register before status checks
-            inflight[key] = (task, model, time.time(), used_today())
+            inflight[key] = (task, model, time.time(), n_before)
             print("launched", key, task, model, flush=True)
         if jobs or inflight:
             time.sleep(45)

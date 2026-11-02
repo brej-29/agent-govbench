@@ -1,0 +1,4 @@
+# window 2026-11-03 04:46 UTC (wake 04:50). Estimated total about 7.6; launch cap 7.0 used
+agent-govbench-guard-judge claude-sonnet-5-5-default
+agent-govbench-agent-task-only-prompt claude-sonnet-5-5-default
+agent-govbench-agent-policy-in-prompt claude-sonnet-5-5-default
