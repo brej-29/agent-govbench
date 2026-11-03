@@ -1,7 +1,8 @@
-# FINAL wake window 2026-11-05 04:46 UTC; must finish before 07:30 UTC (credits end 07:59 UTC). Estimated about 3.2
-agent-govbench-agent-task-only-prompt gpt-5.4-2026-03-05
-agent-govbench-agent-policy-in-prompt gpt-5.4-2026-03-05
-agent-govbench-agent-task-only-prompt claude-haiku-5-5
-agent-govbench-agent-task-only-prompt gpt-oss-120b
-agent-govbench-agent-task-only-prompt gemma-4-31b-it
+# FINAL wake window 2026-11-05 04:52 UTC; must finish before 07:30 UTC (credits end 07:59 UTC). Estimated about 5 to 7.
+# (gpt-5.4 agent tasks moved to 11-04; cheap variance reruns done on 11-03.)
+agent-govbench-guard-judge gpt-6-sol
+agent-govbench-agent-task-only-prompt gpt-6-sol
 agent-govbench-code-mixed-tool-use-pilot claude-haiku-5-5
+agent-govbench-code-mixed-tool-use-pilot gemma-4-31b-it
+agent-govbench-guard-judge claude-haiku-5-5
+agent-govbench-agent-task-only-prompt claude-haiku-5-5
