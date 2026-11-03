@@ -81,3 +81,9 @@ Findings: pilot is at ceiling (see RESULTS.md); intent c18 check was invalid and
 Tooling fixes: pilot task description over 255 chars (shortened); sweep.py now detects reruns by the run's Ended time (the status table keeps only the
 latest run per model); kill stray drivers with `pkill -f "[s]weep.py --queue"` (a plain pattern also kills the calling shell).
 Next: queue_day5.txt (sonnet-5-5), per PLAN.md.
+
+## Wake 2026-11-03 04:50 UTC (done about 11:00)
+Two wake triggers fired for this window (one from an earlier turn); only one run was made. Window used $7.41 of $10 (next window opens 2026-11-04 04:52 UTC);
+month $43.89 of $100. Done: sonnet-5-5 all three tasks ($4.50 total), gpt-5.4 judge ($1.92), 8 variance reruns on cheap models (queue_day5b.txt).
+Findings in RESULTS.md (variance section). Next: queue_day6.txt (gemini-3.6-flash x3, gpt-5.4 agent tasks), then queue_day7.txt as planned (final wake 2026-11-05).
+Note: queue lines are keyed by file and line index, and line 0 can be a comment line; completed lines are skipped on restart.

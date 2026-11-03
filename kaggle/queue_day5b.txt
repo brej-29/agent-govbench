@@ -1,0 +1,10 @@
+# window 2026-11-03 leftover: variance reruns on cheap models (second run of tasks already run) + gpt-5.4 judge. Est. about 3.2
+agent-govbench-guard-judge claude-haiku-5-5
+agent-govbench-guard-judge gpt-oss-120b
+agent-govbench-guard-judge gemma-4-31b-it
+agent-govbench-guard-judge gpt-5.4-nano-2026-03-17
+agent-govbench-agent-task-only-prompt claude-haiku-5-5
+agent-govbench-agent-task-only-prompt gpt-oss-120b
+agent-govbench-agent-task-only-prompt gemma-4-31b-it
+agent-govbench-agent-task-only-prompt gpt-5.4-nano-2026-03-17
+agent-govbench-guard-judge gpt-5.4-2026-03-05
