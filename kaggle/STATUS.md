@@ -87,3 +87,9 @@ Two wake triggers fired for this window (one from an earlier turn); only one run
 month $43.89 of $100. Done: sonnet-5-5 all three tasks ($4.50 total), gpt-5.4 judge ($1.92), 8 variance reruns on cheap models (queue_day5b.txt).
 Findings in RESULTS.md (variance section). Next: queue_day6.txt (gemini-3.6-flash x3, gpt-5.4 agent tasks), then queue_day7.txt as planned (final wake 2026-11-05).
 Note: queue lines are keyed by file and line index, and line 0 can be a comment line; completed lines are skipped on restart.
+
+## 2026-11-03 decisions (owner)
+- Pilot v1 reported by the owner as a null (at ceiling). No extension run. Nothing launched on 11-03 after the sweep items above.
+- Attribution off for this repo: `.claude/settings.json` sets attribution.commit and attribution.pr to empty (and includeCoAuthoredBy false); commits use the
+  repo-local identity brej-29. No Claude-Session trailers or session links from now on. History is not rewritten.
+- Pending on the 11-04 wake: draft pilot v2 (no model runs). On the 11-05 wake: deliver v2 in 15-row chunks, finalise RUNBOOK and UI_STEPS, mark unverified claims in GRANT_DRAFT.
