@@ -118,7 +118,7 @@ def main():
     df["passed"] = [rescore(items[r["id"]], ast.literal_eval(r["calls"]) if isinstance(r["calls"], str) else []) for _, r in df.iterrows()]
     changed = df[df.passed != df.passed_logged]
     models = sorted(df.model.unique())
-    L = ["Review provenance: scores and rewrites by the owner; review notes AI-drafted, every row checked and approved by the owner. Initial item drafts written by Claude.", ""]
+    L = ["Review provenance: scores and rewrites by the owner; review notes AI-drafted, every row checked and approved by the owner. Initial item drafts were AI-drafted.", ""]
     ids = sorted({x.split("-")[1] for x in changed["id"]})
     L.append(f"Scores use the current item checks applied to the logged tool calls (rescored offline): {len(changed)} of {len(df)} item runs "
              f"differ from the pass/fail logged on Kaggle, all in intent(s) {ids}.")

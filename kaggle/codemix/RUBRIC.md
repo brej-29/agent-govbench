@@ -1,7 +1,7 @@
 # Review rubric: naturalness of the Tanglish and Manglish drafts
 
 Sheet: `review_sheet.csv` (30 intents, one row each; English, Tanglish, Manglish side by side). The Tamil and Malayalam
-lines are Claude's drafts, not written by native speakers. Everything marked "draft anchor" below is a draft judgement
+lines are AI-drafted, not written by native speakers. Everything marked "draft anchor" below is a draft judgement
 to calibrate against, not truth. Where you disagree with an anchor, your score wins.
 
 ## Naturalness scale (score each language separately)

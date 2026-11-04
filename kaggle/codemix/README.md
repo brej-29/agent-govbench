@@ -1,7 +1,7 @@
 # Code-mixed tool-use items (Tanglish and Manglish pilot)
 
-Status: REVIEWED by the owner (2026-11-01); not yet run. 30 intents x 3 languages = 90 items. Files: `items_draft.jsonl` (Claude's
-drafts), `review_sheet_reviewed.csv` (the owner's sheet exactly as returned), `items_reviewed.jsonl` (drafts with the owner's
+Status: REVIEWED by the owner (2026-11-01); not yet run. 30 intents x 3 languages = 90 items. Files: `items_draft.jsonl` (the AI-drafted
+originals), `review_sheet_reviewed.csv` (the owner's sheet exactly as returned), `items_reviewed.jsonl` (drafts with the owner's
 rewrites applied; this is what the task uses, copied to `kaggle/data/codemix_items.jsonl`), `ARG_CHECK.md`, `speech_acts.csv`.
 
 **Review provenance (stated by the owner, 2026-11-02):** "All scores, rewrites are my own. Notes drafted with AI help, every row checked and approved by me." Keep this line wherever the pilot, its results tables or the write-up are published.
@@ -55,7 +55,7 @@ so the English minus code-mixed pass rate, paired per intent, isolates the effec
   tests language understanding of intent and number words less than a fully natural set would.
 - The agent runs with the full policy in the system prompt (the deployed setting); governance items test that policy
   application survives code-mixing.
-- Drafts were written by Claude, not by native speakers; the owner reviewed and rewrote them (provenance line above). Dialect, register and spelling conventions vary; the review
+- Drafts were AI-drafted, not written by native speakers; the owner reviewed and rewrote them (provenance line above). Dialect, register and spelling conventions vary; the review
   sheet asks for a 1 to 5 naturalness score and a corrected text per language.
 - Pilot size (30 intents) gives wide intervals; read per-language gaps as indicative, with the paired design as the main control.
 

@@ -91,7 +91,7 @@ Note: queue lines are keyed by file and line index, and line 0 can be a comment 
 ## 2026-11-03 decisions (owner)
 - Pilot v1 reported by the owner as a null (at ceiling). No extension run. Nothing launched on 11-03 after the sweep items above.
 - Attribution off for this repo: `.claude/settings.json` sets attribution.commit and attribution.pr to empty (and includeCoAuthoredBy false); commits use the
-  repo-local identity brej-29. No Claude-Session trailers or session links from now on. History is not rewritten.
+  repo-local identity brej-29. No session trailers or links from now on. History is not rewritten.
 - Pending on the 11-04 wake: draft pilot v2 (no model runs). On the 11-05 wake: deliver v2 in 15-row chunks, finalise RUNBOOK and UI_STEPS, mark unverified claims in GRANT_DRAFT.
 
 ## Wake 2026-11-04 04:50 UTC (done about 08:30)

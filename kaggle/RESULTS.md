@@ -62,7 +62,7 @@
 **Pro vs Flash, agent-policy, 105 attack scenarios.** Attack success Pro 0.067, Flash 0.048; difference (Pro minus Flash) +0.019 [-0.029, +0.067] family bootstrap. Discordant pairs: Pro exploited and Flash resisted 4, the reverse 2; exact McNemar p = 0.688.
 
 ## 2026-11-02: code-mixed pilot (reviewed items; first results)
-Review provenance: scores and rewrites by the owner; review notes AI-drafted, every row checked and approved by the owner. Initial item drafts written by Claude.
+Review provenance: scores and rewrites by the owner; review notes AI-drafted, every row checked and approved by the owner. Initial item drafts were AI-drafted.
 
 Scores use the current item checks applied to the logged tool calls (rescored offline): 12 of 360 item runs differ from the pass/fail logged on Kaggle, all in intent(s) ['c18'].
 
