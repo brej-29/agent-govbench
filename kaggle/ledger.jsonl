@@ -44,3 +44,9 @@
 {"key": "queue_day5b.txt:8", "task": "agent-govbench-agent-task-only-prompt", "model": "gpt-5.4-nano-2026-03-17", "state": "Completed", "launched": 1793686360.2731583, "finished": 1793686695.4178092, "daily_used_after": 5.49}
 {"key": "queue_day5b.txt:6", "task": "agent-govbench-agent-task-only-prompt", "model": "gpt-oss-120b", "state": "Completed", "launched": 1793684881.4831016, "finished": 1793686924.5920632, "daily_used_after": 7.41}
 {"key": "queue_day5b.txt:9", "task": "agent-govbench-guard-judge", "model": "gpt-5.4-2026-03-05", "state": "Completed", "launched": 1793686733.3186412, "finished": 1793687227.734685, "daily_used_after": 7.41}
+{"key": "queue_day6.txt:1", "task": "agent-govbench-guard-judge", "model": "gemini-3.6-flash", "state": "Completed", "launched": 1793768015.7517853, "finished": 1793768565.7422838, "daily_used_after": 2.73}
+{"key": "queue_day6.txt:2", "task": "agent-govbench-agent-task-only-prompt", "model": "gemini-3.6-flash", "state": "Completed", "launched": 1793768040.0713155, "finished": 1793768807.3996785, "daily_used_after": 3.77}
+{"key": "queue_day6.txt:3", "task": "agent-govbench-agent-policy-in-prompt", "model": "gemini-3.6-flash", "state": "Completed", "launched": 1793768617.0088866, "finished": 1793769141.0053096, "daily_used_after": 4.78}
+{"key": "queue_day6.txt:4", "task": "agent-govbench-agent-task-only-prompt", "model": "gpt-5.4-2026-03-05", "state": "Completed", "launched": 1793768854.6569455, "finished": 1793769229.7362094, "daily_used_after": 5.81}
+{"key": "queue_day6.txt:5", "task": "agent-govbench-agent-policy-in-prompt", "model": "gpt-5.4-2026-03-05", "state": "Completed", "launched": 1793769182.2487903, "finished": 1793769531.6464574, "daily_used_after": 5.95}
+{"key": "q_d.txt:0", "task": "agent-govbench-guard-judge", "model": "gpt-6-sol", "state": "Completed", "launched": 1793769581.5210733, "finished": 1793770138.9679873, "daily_used_after": 7.74}

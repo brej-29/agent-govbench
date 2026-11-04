@@ -93,3 +93,8 @@ Note: queue lines are keyed by file and line index, and line 0 can be a comment 
 - Attribution off for this repo: `.claude/settings.json` sets attribution.commit and attribution.pr to empty (and includeCoAuthoredBy false); commits use the
   repo-local identity brej-29. No Claude-Session trailers or session links from now on. History is not rewritten.
 - Pending on the 11-04 wake: draft pilot v2 (no model runs). On the 11-05 wake: deliver v2 in 15-row chunks, finalise RUNBOOK and UI_STEPS, mark unverified claims in GRANT_DRAFT.
+
+## Wake 2026-11-04 04:50 UTC (done about 08:30)
+Two wake triggers fired again; one run. Window used $7.74 of $10 (next window opens 2026-11-05 04:53 UTC); month $51.6 of $100. Done: gemini-3.6-flash x3, gpt-5.4 task-only and policy,
+gpt-6-sol judge. Pilot v2 drafted without model runs (kaggle/codemix_v2/, DESIGN.md has item counts, tests and cost). Remaining for the final wake: gpt-6-sol agent task-only,
+final runbook and UI steps, v2 chunks delivery, grant draft claim marking.
