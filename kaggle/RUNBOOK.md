@@ -46,3 +46,24 @@ about $45 of headroom after the scheduled windows.
 4. Create the benchmark and add the tasks: see `UI_STEPS.md`.
 5. Review the benchmark page text and the grant draft (`GRANT_DRAFT.md`), then submit the grant form yourself.
 6. Review provenance is recorded (owner's statement of 2026-11-02, in `kaggle/codemix/README.md`): keep that line wherever the pilot is published.
+
+## Pilot v2 (draft, to run after your review; nothing has been run)
+Design, item counts and what each intent tests: `codemix_v2/DESIGN.md`. Review the four chunks `codemix_v2/review_chunk_01..04.csv` (fill the owner columns, same rules
+as `codemix/RUBRIC.md`: rewrite lines scored 3 or below, keep every argument value identical, mark meaning N only if a line asks for something different), save the
+filled files as `review_chunk_0N_filled.csv` in the same folder, then:
+```bash
+python kaggle/codemix_v2/apply_review_v2.py kaggle/codemix_v2/review_chunk_0{1,2,3,4}_filled.csv   # rewrites, drops, argument-identity check
+cp kaggle/codemix_v2/items_v2_reviewed.jsonl kaggle/data/codemix_v2_items.jsonl
+kaggle datasets version -p kaggle/data -m "Add codemix_v2_items.jsonl"                           # dataset stays private until you decide
+python kaggle/build_tasks.py 12                                                                 # writes kaggle/dist/codemix_v2.py
+kaggle b t push agent-govbench-code-mixed-tool-use-v2 -f kaggle/dist/codemix_v2.py -d brejeshbalakrishnan/agent-govbench-items --wait
+#   (the slug comes from the task name; if the CLI rejects it, it prints the available slug)
+#   pushing runs the task once on gemini-3.8-flash: about $2.4
+printf 'agent-govbench-code-mixed-tool-use-v2 claude-opus-5-5-default\nagent-govbench-code-mixed-tool-use-v2 claude-haiku-5-5\nagent-govbench-code-mixed-tool-use-v2 gemma-4-31b-it\n' > kaggle/queue_v2.txt
+python kaggle/sweep.py --queue kaggle/queue_v2.txt --max-inflight 2 --daily-cap 6.0 --dl kaggle/runs
+python kaggle/analyze.py kaggle/runs --out runs.csv
+python kaggle/codemix_v2/analyze_pilot_v2.py runs.csv --out pilot_v2_section.md
+```
+Cost: about $8.8 per pass of {opus-5-5, gemini-3.8-flash, gemma-4-31b, haiku-5-5}; three passes about $26 (see DESIGN.md for cheaper options). Repeat a queue line in a NEW queue file
+to rerun. Use one opus pass per day at most ($5.8 of the $10 daily quota). The monthly quota refills on 2026-11-28 19:21 UTC; until then the month total is capped at $100
+(about $54 will remain after the scheduled windows).

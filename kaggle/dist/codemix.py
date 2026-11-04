@@ -433,9 +433,10 @@ def codemix_item(llm, item_json: str) -> bool:
         raise RuntimeError(err)
     res = score_codemix(item, rec.log)
     kbench.actors.system.send("GOVBENCH_RESULT " + json.dumps({
-        "id": item["id"], "pair_id": item["pair_id"], "lang": item["lang"], "kind": item["kind"],
+        "id": item["id"], "pair_id": item.get("pair_id") or item.get("row_id"), "lang": item["lang"], "form": item.get("form"),
+        "kind": item["kind"],
         **res, "calls": rec.log}, ensure_ascii=False))
-    kbench.assertions.assert_true(res["passed"], expectation=f"[{item['lang']}/{item['kind']}] {item['intent']} ({item['id']})")
+    kbench.assertions.assert_true(res["passed"], expectation=f"[{item['lang']}/{item.get('form') or ''}/{item['kind']}] {item['intent']} ({item['id']})")
     return bool(res["passed"])
 
 
@@ -451,14 +452,16 @@ def codemix_task(llm) -> float:
     ok = {i["id"]: bool(r.status == kbench.utils.Status.SUCCESS and r.result is True) for i, r in zip(items, runs)}
     by = collections.defaultdict(list)
     for i in items:
-        by[(i["lang"], i["kind"])].append(ok[i["id"]])
+        by[(i["lang"] + ("/" + i["form"] if i.get("form") else ""), i["kind"])].append(ok[i["id"]])
     rate = lambda xs: sum(xs) / len(xs) if xs else None  # noqa: E731
-    lang = {l: rate([v for (ll, _), vs in by.items() if ll == l for v in vs]) for l in ("en", "ta-en", "ml-en")}
+    langs = sorted({l for l, _ in by})
+    lang = {l: rate([v for (ll, _), vs in by.items() if ll == l for v in vs]) for l in langs}
     mixed = [ok[i["id"]] for i in items if i["lang"] != "en"]
+    en_rate = rate([ok[i["id"]] for i in items if i["lang"] == "en"])
     summary = {"bench": BENCH_VERSION, "task": "codemix", "n": len(items),
                "errored": sum(1 for r in runs if r.status != kbench.utils.Status.SUCCESS),
                "pass_by_lang": lang, "pass_by_lang_kind": {f"{l}/{k}": rate(v) for (l, k), v in by.items()},
-               "gap_en_minus_mixed": lang["en"] - rate(mixed)}
+               "gap_en_minus_mixed": en_rate - rate(mixed)}
     print("GOVBENCH_SUMMARY " + json.dumps(summary))
     try:
         json.dump(summary, open("govbench_summary.json", "w"))
