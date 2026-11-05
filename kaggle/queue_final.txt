@@ -1,0 +1,5 @@
+# final window 2026-11-05: complete gpt-6-sol, then variance second runs on mid and frontier models. Est. about 6.3; launch cap 6.0 used
+agent-govbench-agent-policy-in-prompt gpt-6-sol
+agent-govbench-agent-task-only-prompt gemini-3.8-flash
+agent-govbench-agent-task-only-prompt claude-sonnet-5-5-default
+agent-govbench-agent-task-only-prompt gemini-3.1-pro-preview

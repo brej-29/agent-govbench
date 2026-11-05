@@ -25,6 +25,15 @@ python kaggle/sweep.py --queue kaggle/queue_day5.txt --max-inflight 2 --daily-ca
 - A task you push runs once on gemini-3.8-flash at creation (about $1 to $1.5). Do not re-push the three main tasks; a new version means rerunning every model.
 - To rerun a model on a task (variance), put a new line for it in a NEW queue file.
 
+## Get the data back (this session's downloaded runs are not kept)
+The run files stay on Kaggle. A flattened per-item table of everything run up to 2026-11-05 is committed: `kaggle/results/runs_table.csv.gz`
+(`gunzip -k` it, or pass it to the scripts below after unzipping). To refetch raw runs:
+```bash
+for t in agent-govbench-guard-judge agent-govbench-agent-policy-in-prompt agent-govbench-agent-task-only-prompt agent-govbench-code-mixed-tool-use-pilot; do
+  kaggle b t download $t -o kaggle/runs/ -f; done          # all models; if a model folder comes back empty use a fresh folder
+python kaggle/analyze.py kaggle/runs --out runs.csv
+```
+
 ## Read the ledger and results
 - `kaggle/ledger.jsonl`: one line per finished run: queue file and line (`key`), task, model, state, `daily_used_after` (quota used when it finished).
   A queue line whose key is in the ledger is skipped on restart.
@@ -35,17 +44,26 @@ python kaggle/sweep.py --queue kaggle/queue_day5.txt --max-inflight 2 --daily-ca
 - Offline tests: `python -m pytest tests/test_kaggle_port.py`.
 
 ## Runs that remain after 2026-11-05 (estimated cost)
-Filled in by the final wake; at planning time: gpt-6-sol 3 tasks (about $6; test one agent item first, reasoning is forced off);
-pilot reruns on opus-5-5 and gemma-4-31b (about $1.5); further variance reruns; gemini-3.1-pro judge and policy reruns (about $8). The month stays under $100 with
-about $45 of headroom after the scheduled windows.
+All planned sweep runs are finished (16 models x 3 tasks; month used $58.38 of $100, refill 2026-11-28 19:21 UTC; about $41 of headroom now). Nothing is queued.
+Optional, in value order (estimates from measured costs):
+| Run | Est. $ |
+|---|---|
+| Third runs for variance on the 11 pairs with two runs (judge x4 about $2.2, agent task-only x7 about $8) | about 10 |
+| Second runs of the remaining frontier tasks: gemini-3.1-pro and opus-5-5 judge (about $4.8 and $3.7), opus-5-5 task-only ($2.4) | about 11 |
+| Pilot v2 (after your review): one pass of opus-5-5, gemini-3.8-flash, gemma-4-31b, haiku-5-5; three passes | about 9; about 26 |
+| gemini-3.1-pro and opus-5-5 policy-task second runs | about 5 |
+| Not run: claude-opus-5 (about $22 per full pass), gpt-5.5 (about $13), gemini-3-flash-preview (about $4) | optional |
+| Cannot run: grok-4.5 and grok-4.6 (404 at inference), gpt-6-astra (no tool support), gemini-2.5-* (multiple-tools error) | n/a |
+Keep each day under $10 (rolling 24 h) and launch below about $6 "used" so an in-flight run cannot cross the limit. Queue files for reruns go in NEW files.
 
 ## Do by hand in the Kaggle web UI (nothing here is done yet; nothing is public)
 1. Decide and say "go" before anything is made public. Until then every task and the dataset are private.
 2. Publish the dataset `agent-govbench-items` (Dataset page, Settings/Sharing, set to Public) after checking its description. A public task needs public data.
 3. Publish the three tasks (and the pilot if you want it): `kaggle b t publish <slug>` or the task page's Make public. Publishing also publishes the backing notebook unless you pass `--no-publish-backing-notebook`.
 4. Create the benchmark and add the tasks: see `UI_STEPS.md`.
-5. Review the benchmark page text and the grant draft (`GRANT_DRAFT.md`), then submit the grant form yourself.
-6. Review provenance is recorded (owner's statement of 2026-11-02, in `kaggle/codemix/README.md`): keep that line wherever the pilot is published.
+5. Review the benchmark page text and the grant draft (`GRANT_DRAFT.md`; every unverified claim is tagged `[UNVERIFIED]`), then submit the grant form yourself.
+6b. The README has a hidden (commented) Kaggle section; uncomment it and fill in the benchmark and dataset URLs only after you say go.
+7. Review provenance is recorded (owner's statement of 2026-11-02, in `kaggle/codemix/README.md`): keep that line wherever the pilot is published.
 
 ## Pilot v2 (draft, to run after your review; nothing has been run)
 Design, item counts and what each intent tests: `codemix_v2/DESIGN.md`. Review the four chunks `codemix_v2/review_chunk_01..04.csv` (fill the owner columns, same rules

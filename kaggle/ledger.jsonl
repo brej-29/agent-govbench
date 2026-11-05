@@ -50,3 +50,8 @@
 {"key": "queue_day6.txt:4", "task": "agent-govbench-agent-task-only-prompt", "model": "gpt-5.4-2026-03-05", "state": "Completed", "launched": 1793768854.6569455, "finished": 1793769229.7362094, "daily_used_after": 5.81}
 {"key": "queue_day6.txt:5", "task": "agent-govbench-agent-policy-in-prompt", "model": "gpt-5.4-2026-03-05", "state": "Completed", "launched": 1793769182.2487903, "finished": 1793769531.6464574, "daily_used_after": 5.95}
 {"key": "q_d.txt:0", "task": "agent-govbench-guard-judge", "model": "gpt-6-sol", "state": "Completed", "launched": 1793769581.5210733, "finished": 1793770138.9679873, "daily_used_after": 7.74}
+{"key": "q_e.txt:0", "task": "agent-govbench-agent-task-only-prompt", "model": "gpt-6-sol", "state": "Completed", "launched": 1793854471.1197984, "finished": 1793854979.507543, "daily_used_after": 0.82}
+{"key": "queue_final.txt:1", "task": "agent-govbench-agent-policy-in-prompt", "model": "gpt-6-sol", "state": "Completed", "launched": 1793855061.3136816, "finished": 1793855510.431541, "daily_used_after": 2.53}
+{"key": "queue_final.txt:2", "task": "agent-govbench-agent-task-only-prompt", "model": "gemini-3.8-flash", "state": "Completed", "launched": 1793855085.1393175, "finished": 1793856021.1053586, "daily_used_after": 4.06}
+{"key": "queue_final.txt:3", "task": "agent-govbench-agent-task-only-prompt", "model": "claude-sonnet-5-5-default", "state": "Completed", "launched": 1793855548.4403868, "finished": 1793856043.5289414, "daily_used_after": 4.06}
+{"key": "queue_final.txt:4", "task": "agent-govbench-agent-task-only-prompt", "model": "gemini-3.1-pro-preview", "state": "Completed", "launched": 1793856084.1319056, "finished": 1793856685.9658742, "daily_used_after": 6.74}

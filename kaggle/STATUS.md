@@ -98,3 +98,9 @@ Note: queue lines are keyed by file and line index, and line 0 can be a comment 
 Two wake triggers fired again; one run. Window used $7.74 of $10 (next window opens 2026-11-05 04:53 UTC); month $51.6 of $100. Done: gemini-3.6-flash x3, gpt-5.4 task-only and policy,
 gpt-6-sol judge. Pilot v2 drafted without model runs (kaggle/codemix_v2/, DESIGN.md has item counts, tests and cost). Remaining for the final wake: gpt-6-sol agent task-only,
 final runbook and UI steps, v2 chunks delivery, grant draft claim marking.
+
+## FINAL wake 2026-11-05 (done 05:45 UTC)
+Window used $6.74 of $10; month $58.38 of $100 (refill 2026-11-28 19:21 UTC). Done: gpt-6-sol agent tasks (reasoning forced off), second runs on gemini-3.8-flash, sonnet-5-5 and
+gemini-3.1-pro (task-only), final RESULTS.md, RUNBOOK remaining-runs table, GRANT_DRAFT with unverified claims tagged, hidden README Kaggle section (commented out).
+No wake is scheduled after this one. Owner by hand: fill pilot v2 chunks (kaggle/codemix_v2/review_chunk_0N.csv), run v2 per RUNBOOK, UI steps per UI_STEPS.md, say "go" before anything is public.
+Nothing is public (dataset, tasks, notebooks all private). Repo history was not rewritten.

@@ -25,6 +25,14 @@ Intervals are 95% bootstrap intervals that resample scenario families. Live runs
 offline replay scores every guard on the identical calls that agent proposed. Full tables are in
 [Results in full](#results-in-full).
 
+<!-- KAGGLE-SECTION-DRAFT (hidden until the owner says go; uncomment and fill in the URLs then)
+## Kaggle Community Benchmark
+
+The same tasks are available as a Kaggle Community Benchmark so that anyone can run them on models hosted by Kaggle: a guard-judge task (400 labelled
+tool calls) and two agent tasks (180 scenarios, with the policy in the prompt and with a task-only prompt). Scoring is programmatic. Benchmark: <BENCHMARK_URL>.
+Dataset of items: <DATASET_URL>. Port code and notes: [kaggle/](kaggle/) (design deviations from this study are in kaggle/STATUS.md and kaggle/RESULTS.md).
+-->
+
 ## Why this exists
 
 A team running a tool-using agent on Gemini Enterprise Agent Platform (Agent Runtime with Agent Identity, MCP tools on

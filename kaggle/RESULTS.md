@@ -16,17 +16,21 @@
 | gpt-5.4-2026-03-05 | agent-policy | 180 | 0.909 [0.860, 0.952] | 0.990 | 0.827 | 1.18 |
 | gpt-5.4-mini-2026-03-17 | agent-policy | 180 | 0.808 [0.753, 0.864] | 0.895 | 0.720 | 0.20 |
 | gpt-5.4-nano-2026-03-17 | agent-policy | 180 | 0.800 [0.742, 0.857] | 0.933 | 0.667 | 0.11 |
+| gpt-6-sol | agent-policy | 180 | 0.887 [0.834, 0.931] | 0.933 | 0.840 | 0.32 |
 | gpt-oss-120b | agent-policy | 180 | 0.823 [0.769, 0.876] | 0.819 | 0.827 | 0.06 |
 | claude-haiku-4-5-20251001 | agent-task-only | 180 | 0.714 [0.651, 0.774] | 0.629 | 0.800 | 0.81 |
 | claude-haiku-5-5 (run 1 of 2) | agent-task-only | 180 | 0.804 [0.742, 0.862] | 0.781 | 0.827 | 0.08 |
 | claude-haiku-5-5 (run 2 of 2) | agent-task-only | 180 | 0.787 [0.724, 0.842] | 0.733 | 0.840 | 0.08 |
 | claude-opus-5-5-default | agent-task-only | 180 | 0.775 [0.714, 0.838] | 0.790 | 0.760 | 2.42 |
-| claude-sonnet-5-5-default | agent-task-only | 180 | 0.724 [0.660, 0.787] | 0.581 | 0.867 | 1.35 |
+| claude-sonnet-5-5-default (run 1 of 2) | agent-task-only | 180 | 0.724 [0.660, 0.787] | 0.581 | 0.867 | 1.35 |
+| claude-sonnet-5-5-default (run 2 of 2) | agent-task-only | 180 | 0.738 [0.676, 0.801] | 0.610 | 0.867 | 1.33 |
 | gemini-3.1-flash-lite-preview | agent-task-only | 180 | 0.528 [0.470, 0.586] | 0.229 | 0.827 | 0.25 |
-| gemini-3.1-pro-preview | agent-task-only | 180 | 0.645 [0.584, 0.704] | 0.410 | 0.880 | 2.62 |
+| gemini-3.1-pro-preview (run 1 of 2) | agent-task-only | 180 | 0.645 [0.584, 0.704] | 0.410 | 0.880 | 2.62 |
+| gemini-3.1-pro-preview (run 2 of 2) | agent-task-only | 180 | 0.647 [0.587, 0.706] | 0.400 | 0.893 | 2.69 |
 | gemini-3.5-flash-lite | agent-task-only | 180 | 0.626 [0.566, 0.686] | 0.371 | 0.880 | 0.28 |
 | gemini-3.6-flash | agent-task-only | 180 | 0.721 [0.659, 0.784] | 0.562 | 0.880 | 1.40 |
-| gemini-3.8-flash | agent-task-only | 180 | 0.686 [0.625, 0.744] | 0.505 | 0.867 | 1.48 |
+| gemini-3.8-flash (run 1 of 2) | agent-task-only | 180 | 0.686 [0.625, 0.744] | 0.505 | 0.867 | 1.48 |
+| gemini-3.8-flash (run 2 of 2) | agent-task-only | 180 | 0.693 [0.631, 0.751] | 0.533 | 0.853 | 1.57 |
 | gemma-4-26b-a4b-it | agent-task-only | 180 | 0.596 [0.539, 0.660] | 0.352 | 0.840 | 0.23 |
 | gemma-4-31b-it (run 1 of 2) | agent-task-only | 180 | 0.590 [0.536, 0.645] | 0.314 | 0.867 | 0.18 |
 | gemma-4-31b-it (run 2 of 2) | agent-task-only | 180 | 0.589 [0.529, 0.645] | 0.324 | 0.853 | 0.18 |
@@ -34,6 +38,7 @@
 | gpt-5.4-mini-2026-03-17 | agent-task-only | 180 | 0.649 [0.584, 0.713] | 0.524 | 0.773 | 0.31 |
 | gpt-5.4-nano-2026-03-17 (run 1 of 2) | agent-task-only | 180 | 0.582 [0.518, 0.641] | 0.390 | 0.773 | 0.09 |
 | gpt-5.4-nano-2026-03-17 (run 2 of 2) | agent-task-only | 180 | 0.616 [0.548, 0.679] | 0.419 | 0.813 | 0.09 |
+| gpt-6-sol | agent-task-only | 180 | 0.682 [0.619, 0.746] | 0.524 | 0.840 | 0.82 |
 | gpt-oss-120b (run 1 of 2) | agent-task-only | 180 | 0.580 [0.517, 0.645] | 0.333 | 0.827 | 0.06 |
 | gpt-oss-120b (run 2 of 2) | agent-task-only | 180 | 0.580 [0.517, 0.641] | 0.333 | 0.827 | 0.06 |
 | claude-haiku-4-5-20251001 | judge | 400 | 0.850 [0.813, 0.886] | 0.940 | 0.760 | 0.89 |
@@ -132,3 +137,29 @@ should not be read as real from one run. Only 8 pairs with 2 runs each; a third 
 
 ## 2026-11-04
 Added gemini-3.6-flash (3 tasks), gpt-5.4 agent tasks and gpt-6-sol judge; rows above. Pilot v2 drafted (no runs): see kaggle/codemix_v2/DESIGN.md.
+
+## 2026-11-05: final sweep state
+gpt-6-sol now has all three tasks (agent tasks ran with reasoning forced off; task-only 0.682, policy 0.887, judge 0.970). Second runs added for gemini-3.8-flash,
+claude-sonnet-5-5 and gemini-3.1-pro on the task-only agent task. Run-to-run variance, now 11 pairs with two runs:
+
+```
+                  task                     model  runs         scores  max_diff  item_flip_rate  n_items
+agent-task-only-prompt          claude-haiku-5-5     2 [0.804, 0.787]     0.017           0.044      180
+agent-task-only-prompt claude-sonnet-5-5-default     2 [0.724, 0.738]     0.014           0.017      180
+agent-task-only-prompt    gemini-3.1-pro-preview     2 [0.645, 0.647]     0.002           0.044      180
+agent-task-only-prompt          gemini-3.8-flash     2 [0.686, 0.693]     0.007           0.044      180
+agent-task-only-prompt            gemma-4-31b-it     2  [0.59, 0.589]     0.001           0.033      180
+agent-task-only-prompt   gpt-5.4-nano-2026-03-17     2 [0.582, 0.616]     0.034           0.122      180
+agent-task-only-prompt              gpt-oss-120b     2   [0.58, 0.58]     0.000           0.078      180
+           guard-judge          claude-haiku-5-5     2 [0.928, 0.925]     0.003           0.102      400
+           guard-judge            gemma-4-31b-it     2   [0.97, 0.98]     0.010           0.010      400
+           guard-judge   gpt-5.4-nano-2026-03-17     2 [0.855, 0.852]     0.003           0.072      400
+           guard-judge              gpt-oss-120b     2 [0.932, 0.942]     0.010           0.050      400
+
+mean abs score difference: 0.009 | mean item flip rate: 0.056
+```
+
+The frontier and mid models are as stable as the small ones on headline score (largest difference 0.007 for the three new pairs) with about 2 to 4% of items flipping, versus
+5 to 12% for the small models; the variance estimate is still from two runs per pair. Final quota use: $58.38 of $100 (month), refill 2026-11-28 19:21 UTC.
+c18 note (pilot): the Kaggle-logged pass/fail for pilot intent c18 is stale (the check was fixed afterwards and the runs rescored offline from the logged calls).
+Review provenance of the code-mixed items: see kaggle/codemix/README.md.
