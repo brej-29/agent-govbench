@@ -55,3 +55,4 @@
 {"key": "queue_final.txt:2", "task": "agent-govbench-agent-task-only-prompt", "model": "gemini-3.8-flash", "state": "Completed", "launched": 1793855085.1393175, "finished": 1793856021.1053586, "daily_used_after": 4.06}
 {"key": "queue_final.txt:3", "task": "agent-govbench-agent-task-only-prompt", "model": "claude-sonnet-5-5-default", "state": "Completed", "launched": 1793855548.4403868, "finished": 1793856043.5289414, "daily_used_after": 4.06}
 {"key": "queue_final.txt:4", "task": "agent-govbench-agent-task-only-prompt", "model": "gemini-3.1-pro-preview", "state": "Completed", "launched": 1793856084.1319056, "finished": 1793856685.9658742, "daily_used_after": 6.74}
+{"key": "q_f.txt:0", "task": "agent-govbench-agent-policy-in-prompt", "model": "gemini-3.1-pro-preview", "state": "Completed", "launched": 1793861211.3200428, "finished": 1793861813.047588, "daily_used_after": 9.31}

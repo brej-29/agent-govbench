@@ -163,3 +163,8 @@ The frontier and mid models are as stable as the small ones on headline score (l
 5 to 12% for the small models; the variance estimate is still from two runs per pair. Final quota use: $58.38 of $100 (month), refill 2026-11-28 19:21 UTC.
 c18 note (pilot): the Kaggle-logged pass/fail for pilot intent c18 is stale (the check was fixed afterwards and the runs rescored offline from the logged calls).
 Review provenance of the code-mixed items: see kaggle/codemix/README.md.
+
+## 2026-11-05 (late): gemini-3.1-pro second run, policy-in-prompt task
+Second run complete (180 of 180 items, no errors, cost $2.57; the first run cost $2.58). Score 0.900 in both runs (resist 0.933, completion 0.867 in both);
+2.2% of items (4 of 180) flipped pass/fail between the runs. Daily quota afterwards $9.31 of $10; month $60.94 of $100. The per-item table
+`kaggle/results/runs_table.csv.gz` is refreshed. This is the 12th pair of repeated runs; the variance table above (11 pairs) does not yet include it.
